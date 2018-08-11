@@ -1,0 +1,31 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    {% if date %}
+      <h2>{{ date }}</h2>
+      <a class="waves-effect waves-light btn" href="{% url "index" %}">Убрать фильтр по дате</a>
+    {% endif %}
+    <ul class="collection">
+    {% for f in files %}
+      <li class="collection-item avatar">
+        <i class="material-icons circle green">insert_chart</i>
+          <span class="title"><a href="{% url "file" name=f.name %}">{{ f.name }}</a></span>
+        <p>
+          Создан: {% if date == f.ctime.date %}
+            {{ f.ctime }}
+          {% else %}
+            <a href="{% url "index" date=f.ctime %}">{{ f.ctime }}</a>
+          {% endif %}
+          <br>
+          Изменен: {% if date == f.mtime.date %}
+            {{ f.mtime }}
+          {% else %}
+            <a href="{% url "index" date=f.mtime %}">{{ f.mtime }}</a>
+          {% endif %}
+        </p>
+      </li>
+    {% empty %}
+      Не чего показывать
+    {% endfor %}
+    </ul>
+{% endblock %}
