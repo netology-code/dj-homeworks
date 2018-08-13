@@ -15,7 +15,7 @@ class FileList(TemplateView):
     
     def get_context_data(self, date=None):
         # TODO: убрать решение:
-        # data = super(IndexView, self).get_context_data()
+        # data = super().get_context_data()
         # dir_content = [os.path.join(settings.FILES_PATH, f)
         #                for f in os.listdir(settings.FILES_PATH)]
         # files = []
