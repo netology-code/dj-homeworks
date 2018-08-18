@@ -82,6 +82,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+FILES_PATH = os.path.join(BASE_DIR, 'files')
+
 try:
     from .settings_local import *
 except ImportError:

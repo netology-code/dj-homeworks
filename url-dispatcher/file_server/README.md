@@ -16,8 +16,9 @@
 `datetime.date` в указанный в задании вид и наоборот.
 Для третьей ситуации использовать функцию для отображения: `app.views.file_content`
 
-В классе `app.views.FileList` и функции `app.views.file`
+В классе `app.views.FileList` и функции `app.views.file_content`
 реализовать логику для формирования контекста.
+Директорую, файлы которой нужно отобржать берите из настроек `settings.FILES_PATH`
 
 ![Пример результата](./res/result.gif)
 
@@ -52,8 +53,6 @@ import os
 SECRET_KEY = 'd+mw&mscg5i&tx+#@bf+6m%e+d5z!u#!n%z-^o9u7y1felv2o&'
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-FILES_PATH = os.path.join(BASE_DIR, 'files')
 ```
 
 Выполнить команду:
