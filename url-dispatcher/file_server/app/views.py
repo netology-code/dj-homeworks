@@ -32,7 +32,7 @@ class FileList(TemplateView):
         #             ctime,
         #             mtime,
         #         ))
-        # data['files'] = files
+        # data['files'] = sorted(files)
         # data['date'] = date
         # return data
 
@@ -47,7 +47,7 @@ class FileList(TemplateView):
         }
 
 
-def file(request, name):
+def file_content(request, name):
     # TODO: убрать решение:
     # with open(os.path.join(os.path.join(settings.FILES_PATH, name)), 'r') as f:
     #     return render_to_response('file_content.html', context=dict(file_name=name, file_content=f.read()))

@@ -1,13 +1,13 @@
 import datetime
 
-from django.urls import path, register_converter
-
-from file_server.views import FileList, file
-
+from django.urls import path
 
 # Определите и зарегистрируйте конвертер для определения даты в урлах и наоборот урла по датам
 
 # TODO: убрать решение:
+# from django.urls import register_converter
+# from app.views import FileList, file_content
+#
 # class Date:
 #     regex = '[0-9]{4}-[0-9]{2}-[0-9]{2}'
 #     format = '%Y-%m-%d'
@@ -23,9 +23,10 @@ from file_server.views import FileList, file
 
 
 urlpatterns = [
-    # Определите тут схему урлов и привязите к отображениям FileList и files
+    # Определите схему урлов с привязкой к отображениям .views.FileList и .views.file_content
+
     # TODO: убрать решение:
-    # path('', FileList.as_view(), name='index'),
-    # path('<date:date>', FileList.as_view(), name='index'),
-    # path('file/<name>', file, name='file'),
+    # path('', FileList.as_view(), name='file_list'),
+    # path('<date:date>', FileList.as_view(), name='file_list'),
+    # path('file/<name>', file_content, name='file_content'),
 ]
