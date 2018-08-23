@@ -1,4 +1,4 @@
-{% extends "landing/_base.html" %}
+{% extends "_base.html" %}
 
 {% load static %}
 
@@ -39,7 +39,7 @@
         </div>
       </div>
         <div class="row center">
-          <a href="{% url "stats" %}?marker=original" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">
+          <a href="{% url "index" %}?from-landing=original" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">
             Перейти на сайт!</a>
         </div>
         <br><br>
