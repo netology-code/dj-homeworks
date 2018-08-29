@@ -1,0 +1,19 @@
+{% extends "_base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+    </div>
+  </nav>
+
+  <img class="responsive-img" src="{% static "img/animal-blur-close-up-840326.jpg" %}">
+
+  <div class="row center">
+    <a href="{% url "index" %}?from-landing=test" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">
+      Кликни на ссылочку!</a>
+  </div>
+{% endblock %}
