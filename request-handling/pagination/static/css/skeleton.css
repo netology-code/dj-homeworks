@@ -416,3 +416,10 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  border-color: #ccc;
+  text-shadow: none;
+}

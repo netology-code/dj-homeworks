@@ -17,7 +17,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 ALLOWED_HOSTS = ['127.0.0.1']
-ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -78,6 +77,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+BUS_STATION_CSV = os.path.join(BASE_DIR, 'data-398-2018-08-30.csv')
 
 try:
     from .settings_local import *
