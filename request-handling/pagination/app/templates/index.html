@@ -1,0 +1,31 @@
+{% extends "_base.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Street</th>
+          <th>District</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for station in bus_stations %}
+        <tr>
+          <td>{{ station.Name }}</td>
+          <td>{{ station.Street }}</td>
+          <td>{{ station.District }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% if prev_page_url %}<a class="button button-primary" href="{{ prev_page_url }}">⟵</a>{% endif %}
+    <a class="button disabled" href="">{{ current_page }}</a>
+    {% if next_page_url %}<a class="button button-primary" href="{{ next_page_url }}">⟶</a>{% endif %}
+  </div>
+</div>
+{% endblock %}
