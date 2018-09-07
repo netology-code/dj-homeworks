@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <h3>{{ article.title }}</h3>
+        </div>
+        {% if article.pay and not is_paid %}
+            <p>Для того, чтобы читать данную статью, необходимо подписаться на журнал!</p>
+        {% else %}
+            <p>{{ article.content }}</p>
+        {% endif %}
+    </div>
+{% endblock %}
