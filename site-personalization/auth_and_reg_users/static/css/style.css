@@ -1,0 +1,19 @@
+.header {
+    margin-top: 50px;
+}
+
+.auth-btn {
+    margin-top: 5px;
+}
+
+#id_username, #id_password, #id_password1, #id_password2 {
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form-auth {
+    margin-top: 30px;
+}

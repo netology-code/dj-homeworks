@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Угадай число{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="header">
+            {% if not is_owner %}
+                <form action="/" method="post">{% csrf_token %}
+                    <p>Введите число</p>
+                    <input name="number" type="number" max="10" min="1"/>
+                    <button id="submit">Проверить</button>
+                </form>
+            {% else %}
+                <h2>Загаданное число: {{ number }}</h2>
+                <p>Второй игрок будет вытаться отгадать его</p>
+            {% endif %}
+            <div class="message">
+                {% if message %}
+                    <h3>{{ message }}</h3>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
