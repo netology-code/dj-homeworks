@@ -40,8 +40,7 @@
 
 ## Дополнительная информация
 
-1) Для созания Базы данных вы можете воспользоваться PgAdmin
-2) Для того чтобы тестировать Добавление, Изменение, Удаление экземпляров в Админке вам нужно создать админа
+1) Для того чтобы тестировать Добавление, Изменение, Удаление экземпляров в Админке вам нужно создать админа
 ```bash
 python manage.py createsuperuser
 ```
@@ -50,13 +49,20 @@ python manage.py createsuperuser
 
 Для запуска проекта необходимо:
 
-Установить зависимости:
+* Создать базу данных, пример для Postgres с PgAdmin:
+
+```bash
+createuser --createdb Netologer
+createdb Netology -U Netologer
+```
+
+* Установить зависимости:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Создать файл с локальными настройками `app/settings_local.py`
+* Создать файл с локальными настройками `app/settings_local.py`
 и задать туда обязательные параметры:
 
 * SECRET_KEY - секретная строка
@@ -84,7 +90,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'news/media')
 ```
 
-Выполнить команду:
+* Реализовать модели
+
+* Выполнить команду:
 
 ```bash
 python manage.py runserver
