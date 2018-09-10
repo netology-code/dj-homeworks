@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Новостное агенство Интерда{% endblock %}
+{% block content %}
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm-3">
+                <h4> Разделы</h4>
+                <div class="list-group">
+                    {% for section in sections %}
+                        <a href="/sections/{{ section.id }}" class="list-group-item list-group-item-action">{{ section.name }}</a>
+                    {% endfor %}
+
+                    <br>
+
+                    <a href="/article" class="list-group-item list-group-item-action">+ Добавить новость</a>
+                    <a href="/section_member" class="list-group-item list-group-item-action">+ Добавить статью в раздел</a>
+                </div>
+
+            </div>
+
+
+        <div class="col-md-8">
+            <div class="row">
+                {% for article in articles %}
+                    <div class="col-lg-4 col-sm-6 portfolio-item">
+                        <div class="card h-100">
+                            {% if article.image %}
+                            <a href="/article/{{ article.id }}"><img class="card-img-top" src="{{ article.image.url }}" alt=""></a>
+                            {% else %}
+                            <a href="/article/{{ article.id }}"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            {% endif %}
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="/article/{{ article.id }}">{{ article.title }}</a>
+                                </h4>
+                                <p class="card-text">{{ article.text }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

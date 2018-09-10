@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d561c5b-108f-4ea2-84a4-c19a55b8f28f" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/dj_homeworks$manage.coverage" NAME="manage Coverage Results" MODIFIED="1536399119002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/databases/models_list_displaying" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Netology@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Netology@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Netology@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Netology: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Netology@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Netology: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Netology@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Netology: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Netology@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Netology: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="news_section: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signals.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/news/signals.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="728">
+              <caret line="39" column="43" lean-forward="true" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/request-handling/landing/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="422">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databases/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databases/models_list_displaying/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-32">
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/databases/models_list_displaying/models_list_displaying/settings_local.py" />
+        <option value="$PROJECT_DIR$/databases/models_list_displaying/app/signals.py" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/news/__init__.py" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/news/admin.py" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/news/apps.py" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/news/signals.py" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/mtm_relations/settings.py" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/templates/news/index.html" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/templates/news/news_list.html" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/mtm_relations/settings_local.py" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/templates/news/news_create.html" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/templates/news/section_member_add.html" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/news/static/css/3-col-portfolio.css" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/mtm_relations/urls.py" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/news/models.py" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/news/forms.py" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/templates/base.html" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/news/views.py" />
+        <option value="$PROJECT_DIR$/databases_2/mtm_relations/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="946" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dj-homeworks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dj-homeworks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dj-homeworks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dj-homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="databases_2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dj-homeworks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dj-homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="databases_2" type="462c0819:PsiDirectoryNode" />
+              <item name="mtm_relations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dj-homeworks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dj-homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="databases_2" type="462c0819:PsiDirectoryNode" />
+              <item name="mtm_relations" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dj-homeworks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dj-homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="request-handling" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/databases_2" />
+      <recent name="$PROJECT_DIR$/databases_2/mtm_relations/news" />
+      <recent name="$PROJECT_DIR$/databases_2/mtm_relations" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/databases_2/mtm_relations" />
+      <recent name="$PROJECT_DIR$/databases_2/mtm_relations/article_image" />
+      <recent name="$PROJECT_DIR$/databases_2/mtm_relations/static" />
+      <recent name="$PROJECT_DIR$/databases_2/mtm_relations/static/jquery" />
+      <recent name="$PROJECT_DIR$/databases_2/mtm_relations/static/css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server">
+      <module name="dj-homeworks" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="mtm_relations.settings" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../db2/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d561c5b-108f-4ea2-84a4-c19a55b8f28f" name="Default" comment="" />
+      <created>1536397184351</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536397184351</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27064678" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18624642" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.48727274" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" weight="0.32935324" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="35" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/databases/models_list_displaying/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request-handling/file_server/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/news/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cdc55673-059b-47d7-856d-4dd04568c081/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b3dd6617-cd69-41a0-8691-6a4566fb9c29/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/models_list_displaying/app/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/news/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="43" selection-start-column="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b3dd6617-cd69-41a0-8691-6a4566fb9c29/database/Netology/schema/public/table/news_section">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../db2/lib/python3.6/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="745" selection-start-line="745" selection-end-line="745" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/models_list_displaying/templates/app/book_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request-handling/pagination/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/work_with_database/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request-handling/landing/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/models_list_displaying/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/templates/news/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="244" column="8" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/work_with_database/work_with_database/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/work_with_database/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/models_list_displaying/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/work_with_database/work_with_database/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="24" column="64" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/models_list_displaying/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="44" selection-start-line="10" selection-start-column="4" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/models_list_displaying/models_list_displaying/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../db2/lib/python3.6/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../db2/lib/python3.6/site-packages/django/utils/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../db2/lib/python3.6/site-packages/django/dispatch/dispatcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../db2/lib/python3.6/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../db2/lib/python3.6/site-packages/django/views/generic/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/fixtures/fixtures.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1001" selection-start-column="1001" selection-end-column="1001" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/mtm_relations/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-745">
+          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../db2/lib/python3.6/site-packages/django/forms/fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="212" selection-start-line="212" selection-end-line="212" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/mtm_relations/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="27" column="64" lean-forward="true" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+          <folding>
+            <element signature="e#637#669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/news/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/news/static/css/3-col-portfolio.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/templates/news/section_member_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/templates/news/news_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/templates/news/news_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/mtm_relations/settings_local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/news/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/news/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/news/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/news/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-455">
+          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/news/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request-handling/file_server/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request-handling/landing/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/news/signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="39" column="43" lean-forward="true" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/models_list_displaying/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases_2/mtm_relations/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

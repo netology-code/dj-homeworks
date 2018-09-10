@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Netology@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="Netology">
+      <ObjectId>390691</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12669</ObjectId>
+    </database>
+    <database id="4" parent="1" name="krafto">
+      <ObjectId>88612</ObjectId>
+    </database>
+    <database id="5" parent="1" name="test_db">
+      <ObjectId>94318</ObjectId>
+    </database>
+    <database id="6" parent="1" name="test_Unidoctor">
+      <ObjectId>384590</ObjectId>
+    </database>
+    <database id="7" parent="1" name="Unidoctor">
+      <ObjectId>388029</ObjectId>
+    </database>
+    <role id="8" parent="1" name="GlavVrach">
+      <ObjectId>89453</ObjectId>
+      <Inherit>1</Inherit>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="Netologer">
+      <ObjectId>390690</ObjectId>
+      <Inherit>1</Inherit>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="kraftman">
+      <ObjectId>17144</ObjectId>
+      <Inherit>1</Inherit>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="mergalievibragim">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <role id="12" parent="1" name="patrick">
+      <ObjectId>94317</ObjectId>
+      <Inherit>1</Inherit>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <schema id="14" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-09-08.14:19:50.598</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="15" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="18" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="19" parent="2" name="information_schema">
+      <ObjectId>12381</ObjectId>
+    </schema>
+  </database-model>
+</dataSource>
