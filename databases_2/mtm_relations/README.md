@@ -22,17 +22,17 @@
 
 ### Описание моделей
 
-`Article`
+`Article` - статья
 * title - Название статьи
-* text - Основная инвормация
+* text - Основная информация
 * sections - Связь с `Section`
 * pub_date - Дата публикации
 * image - Изображение
 
-`Section`
-* name - Название Раздела
+`Section` - раздел
+* name - Название раздела
 
-`SectionMember`
+`SectionMember` - модель для связи статьи и раздела
 * article - Связь с `Article`
 * section - Связь с `Section`
 * main - Является ли раздел основным для статьи
