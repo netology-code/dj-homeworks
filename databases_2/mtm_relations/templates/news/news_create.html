@@ -9,7 +9,8 @@
                 <form method="post" enctype="multipart/form-data">
                     <div id="contact-form" class="form-container">
                         {% csrf_token %}
-                        {{ form.as_p }}
+                        {{ form.errors }}
+                        {{ form }}
                         <button type="submit" class="btn btn-dark">Отправить</button>
                     </div>
                 </form>

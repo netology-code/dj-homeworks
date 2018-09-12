@@ -8,7 +8,8 @@
             <div class="col-lg-4 col-sm-6 justify-content-center">
                 <form method="post">
                     {% csrf_token %}
-                    {{ form.as_p }}
+                    {{ form.errors }}
+                    {{ form }}
                     <button type="submit" class="btn btn-dark">Отправить</button>
                 </form>
             </div>

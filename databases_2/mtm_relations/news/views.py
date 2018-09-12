@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
+from django.views.generic import TemplateView
 from .models import Section, Article, SectionMember
 from .forms import ArticleForm, SectionMemberForm
-from django.views.generic import TemplateView
 
 
 def index(request, *args, **kwargs):
@@ -36,14 +36,22 @@ class ArticleCreateView(TemplateView):
             article.save()
 
             for sec in main_section:
-                sec_member = SectionMember(section=Section.objects.get(pk=sec), main=True, article=article)
+                sec_member = SectionMember(section=Section.objects.get(pk=sec),
+                                           main=True,
+                                           article=article
+                                           )
                 sec_member.save()
 
             for sec in additional_sections:
-                sec_member = SectionMember(section=Section.objects.get(pk=sec), main=False, article=article)
+                sec_member = SectionMember(section=Section.objects.get(pk=sec),
+                                           main=False,
+                                           article=article
+                                           )
                 sec_member.save()
 
             return redirect("home")
+
+        render(request, 'news/news_create.html', context={'form': form})
 
 
 class SectionMemberCreateView(TemplateView):
@@ -60,8 +68,12 @@ class SectionMemberCreateView(TemplateView):
             main = form.cleaned_data['main']
             section = form.cleaned_data['section']
 
-            sec_member = SectionMember(article=Article.objects.get(pk=article), main=main,
-                                       section=Section.objects.get(pk=section))
+            sec_member = SectionMember(article=Article.objects.get(pk=article),
+                                       main=main,
+                                       section=Section.objects.get(pk=section)
+                                       )
             sec_member.save()
 
             return redirect("home")
+
+        return render(request, 'news/section_member_add.html', context={'form': form})
