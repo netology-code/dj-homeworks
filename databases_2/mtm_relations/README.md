@@ -91,7 +91,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'news/media')
 ```
 
-* Реализовать модели
+[Документация по базам данных в Django](https://docs.djangoproject.com/en/2.1/ref/databases/#connecting-to-the-database)
+
+* Реализовать модели и сделать миграцию
 
 * Выполнить команду:
 
