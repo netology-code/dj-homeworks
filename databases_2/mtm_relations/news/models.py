@@ -7,7 +7,7 @@ class Article(models.Model):
     """
     title = models.CharField("Название", max_length=64)
     text = models.TextField("Текст")
-    sections = models.ManyToManyField("Section", through="SectionMember", related_name="articles")
+    # sections =
     pub_date = models.DateField("Дата публикации")
     image = models.ImageField("Изображение", upload_to="article_image", blank=True)
 
