@@ -3,6 +3,11 @@ from django import forms
 
 
 class ArticleForm(forms.Form):
+
+    def __init__(self, *args, **kwargs):
+        self.sections = kwargs.pop('sections')
+        super(ArticleForm, self).__init__(*args, **kwargs)
+
     title = forms.CharField(label='Название', widget=forms.TextInput(
         attrs={
             'class': 'form-control'
@@ -20,12 +25,12 @@ class ArticleForm(forms.Form):
     ))
     # main_section = forms.MultipleChoiceField(
     #                                  label='Основной раздел',
-    #                                  choices=tuple([(sec.pk, sec) for ind, sec in enumerate(Section.objects.all()) if sec.pk != 1]),
+    #                                  choices=tuple([(sec.pk, sec) for sec in sections]),
     #                                  widget=forms.CheckboxSelectMultiple()
     #)
     # additional_sections = forms.MultipleChoiceField(
     #                                  label='Дополнительные разделы',
-    #                                  choices=tuple([(sec.pk, sec) for ind, sec in enumerate(Section.objects.all()) if sec.pk != 1]),
+    #                                  choices=tuple([(sec.pk, sec) for sec in sections]),
     #                                  widget=forms.CheckboxSelectMultiple(),
     #                                  required=False
     #)
@@ -40,9 +45,15 @@ class ArticleForm(forms.Form):
 
 
 class SectionMemberForm(forms.Form):
+
+    def __init__(self, *args, **kwargs):
+        self.sections = kwargs.pop('sections')
+        self.articles = kwargs.pop('articles')
+        super(SectionMemberForm, self).__init__(*args, **kwargs)
+
     # section = forms.ChoiceField(
     #                   label='Раздел',
-    #                   choices=tuple([(sec.pk, sec) for sec in Section.objects.exclude(pk=1)]),
+    #                   choices=tuple([(sec.pk, sec) for sec in sections]),
     #                   widget=forms.Select(
     #                                 attrs={
     #                                     'class': 'form-control'
@@ -60,7 +71,7 @@ class SectionMemberForm(forms.Form):
     )
     # article = forms.ChoiceField(
     #                   label='Статья',
-    #                   choices=tuple([(sec.pk, sec) for sec in Article.objects.all()]),
+    #                   choices=tuple([(sec.pk, sec) for sec in articles]),
     #                   widget=forms.Select(
     #                                   attrs={
     #                                       'class': 'form-control'

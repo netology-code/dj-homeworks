@@ -18,7 +18,7 @@ def index(request, *args, **kwargs):
 class ArticleCreateView(TemplateView):
 
     def get(self, request, *args, **kwargs):
-        data = {"form": ArticleForm()}
+        data = {"form": ArticleForm(sections=Section.objects.all())}
         return render(request, 'news/news_create.html', context=data)
 
     def post(self, request, *args, **kwargs):
@@ -49,7 +49,7 @@ class ArticleCreateView(TemplateView):
 class SectionMemberCreateView(TemplateView):
 
     def get(self, request, *args, **kwargs):
-        data = {"form": SectionMemberForm()}
+        data = {"form": SectionMemberForm(articles=Article.objects.all(), sections=Section.objects.all())}
         return render(request, 'news/section_member_add.html', context=data)
 
     def post(self, request, *args, **kwargs):
