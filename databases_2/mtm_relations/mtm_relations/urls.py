@@ -22,8 +22,8 @@ from django.conf import settings
 urlpatterns = [
     url('admin/', admin.site.urls),
     url('^$', index, name="home"),
-    url('^sections/(?P<section_id>\d+)/$', index),
-    url('^articles/(?P<article_id>\d+)/$', ArticleCreateView.as_view()),
-    url('^article/$', ArticleCreateView.as_view()),
-    url('^section_member/$', SectionMemberCreateView.as_view()),
+    url('^article/$', ArticleCreateView.as_view(), name="article"),
+    url('^articles/(?P<article_id>\d+)/$', ArticleCreateView.as_view(), name="articles"),
+    url('^sections/(?P<section_id>\d+)/$', index, name="sections"),
+    url('^section_member/$', SectionMemberCreateView.as_view(), name="section_member_create"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
