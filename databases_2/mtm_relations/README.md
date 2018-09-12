@@ -67,7 +67,7 @@ pip install -r requirements.txt
 и задать туда обязательные параметры:
 
 * SECRET_KEY - секретная строка
-* DATABASES - база данных
+* DATABASES - база данных. [Документация по базам данных в Django](https://docs.djangoproject.com/en/2.1/ref/databases/#connecting-to-the-database)
 * MEDIA_URL - URL по которому будут обслуживаться медиа файлы
 * MEDIA_ROOT - путь по которому медиа файлы будут храниться у вас на устройстве
 
@@ -90,8 +90,6 @@ DATABASES = {
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'news/media')
 ```
-
-[Документация по базам данных в Django](https://docs.djangoproject.com/en/2.1/ref/databases/#connecting-to-the-database)
 
 * Реализовать модели и сделать миграцию
 
