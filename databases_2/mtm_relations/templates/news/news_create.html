@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Новостное агенство Интерда{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 justify-content-center">
+                <form method="post" enctype="multipart/form-data">
+                    <div id="contact-form" class="form-container">
+                        {% csrf_token %}
+                        {{ form.errors }}
+                        {{ form }}
+                        <button type="submit" class="btn btn-dark">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
