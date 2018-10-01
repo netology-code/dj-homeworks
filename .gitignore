@@ -6,3 +6,5 @@ __pycache__/
 
 ### Project specific ###
 settings_local.py
+
+*.sqlite3
