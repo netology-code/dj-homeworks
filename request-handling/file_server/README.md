@@ -18,7 +18,55 @@
 
 В классе `app.views.FileList` и функции `app.views.file_content`
 реализовать логику для формирования контекста.
-Директорию, файлы которой нужно отображать берите из настроек `settings.FILES_PATH`
+Директорию, файлы которой нужно отображать, берите из настроек `settings.FILES_PATH`
+
+Для начала ваша задача грамотно привязать вьюхи из `app/views.py`
+в схему урлов в `app/urls.py`.
+В комментариях написаны названия каждой привязки. Их важно сохранить
+- по ним будут строиться ссылки в отображаемых документах.
+
+Помните, если вьюха принимает аргумент, то одноименных агрумент должен быть прописан в пути:
+
+```python
+def view_func(request, arg1):
+    return render(request, 'index.html', context={'arg1': arg1})
+
+
+urlpatterns = [
+    path('', view_func),  # так не срабоатет
+    path('<arg1>/', view_func),  # а так сработает
+    path('path/<int:arg1>/', view_func),  # и так тоже сработает
+]
+```
+
+Впрочем для аргумента может быть задано значение по-умолчанию:
+
+```python
+def view_func(request, arg1=None):
+    return render(request, 'index.html', context={'arg1': arg1})
+
+
+urlpatterns = [
+    path('', view_func),  # В таком случае этот вариант сработает и в arg1 будет None
+    path('<arg1>/', view_func),  # а в таком случае в arg1 будет приходить строка указанная в пути
+]
+```
+
+Для классов принимаемые аргументы прописываются в методе `get_context_data`.
+а привязка класса происходит с помощью метода `as_view()`:
+
+
+```python
+class ViewClass(TemplateView):
+    template_name = 'index.html'
+    def get_context_data(self, arg1=None):
+        return {'arg1': arg1}
+
+
+urlpatterns = [
+    path('', ViewClass.as_view())
+]
+```
 
 ![Пример результата](./res/result.gif)
 
@@ -43,11 +91,13 @@ pip install -r requirements.txt
 и задать туда обязательные параметры:
 
 * SECRET_KEY - секретная строка
+* DEBUG = True
 
 Например:
 
 ```python
 SECRET_KEY = 'd+mw&mscg5i&tx+#@bf+6m%e+d5z!u#!n%z-^o9u7y1felv2o&'
+DEBUG = True
 ```
 
 Выполнить команду:
