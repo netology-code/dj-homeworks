@@ -87,19 +87,6 @@ urlpatterns = [
 pip install -r requirements.txt
 ```
 
-Создать файл с локальными настройками `app/settings_local.py`
-и задать туда обязательные параметры:
-
-* SECRET_KEY - секретная строка
-* DEBUG = True
-
-Например:
-
-```python
-SECRET_KEY = 'd+mw&mscg5i&tx+#@bf+6m%e+d5z!u#!n%z-^o9u7y1felv2o&'
-DEBUG = True
-```
-
 Выполнить команду:
 
 ```bash

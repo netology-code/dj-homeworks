@@ -84,6 +84,9 @@ STATICFILES_DIRS = [
 
 FILES_PATH = os.path.join(BASE_DIR, 'files')
 
+SECRET_KEY = 'put your secret here'
+DEBUG = True
+
 try:
     from .settings_local import *
 except ImportError:
