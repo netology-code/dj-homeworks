@@ -1,6 +1,6 @@
 import datetime
 
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.views.generic import TemplateView
 
 
@@ -21,7 +21,8 @@ class FileList(TemplateView):
 
 def file_content(request, name):
     # Реализуйте алгоритм подготавливающий контекстные данные для шаблона по примеру:
-    return render_to_response(
+    return render(
+        request,
         'file_content.html',
         context={'file_name': 'file_name_1.txt', 'file_content': 'File content!'}
     )

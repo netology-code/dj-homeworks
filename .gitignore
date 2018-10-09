@@ -4,5 +4,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+*.sqlite3
+
 ### Project specific ###
 settings_local.py
