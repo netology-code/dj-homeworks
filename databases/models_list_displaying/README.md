@@ -48,6 +48,6 @@ python manage.py runserver
 python manage.py loaddata fixtures/books.json
 ```
 
-![Каталог со всеми книгами](./res/catalog_1.png)
+![Каталог со всеми книгами](res/catalog_1.png)
 
-![Каталог с книгами выбранной даты публикования](./res/catalog_2.png)
+![Каталог с книгами выбранной даты публикования](res/catalog_2.png)
