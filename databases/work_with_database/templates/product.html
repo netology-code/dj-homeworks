@@ -1,10 +1,14 @@
-<html>
-    <head>
-        <title>{{ phone.name }}</title>
-    </head>
-    <body>
-        <h1>{{ phone.name }}</h1>
-        <p>Цена: {{ phone.price }}р.</p>
-        <img src="{{ phone.image }}"/>
-    </body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Телефон{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <h1>Телефон</h1>
+        </div>
+        <div class="content">
+
+        </div>
+    </div>
+{% endblock %}
