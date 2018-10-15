@@ -32,13 +32,6 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-Загрузить тестовые данные:
-
-```bash
-python manage.py loaddata articles.json
-```
-
-
 Запустить отладочный веб-сервер проекта:
 
 ```bash
