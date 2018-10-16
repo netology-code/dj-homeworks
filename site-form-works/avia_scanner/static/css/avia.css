@@ -1,0 +1,65 @@
+h1 {
+    color: #96f226;
+    font-size: 36px;
+    width: 108px;
+}
+#clickme {
+    border-radius: 0;
+    color: #96f226;
+}
+#clickme:hover {
+    cursor: pointer;
+}
+#clickme:active {
+    box-shadow: 0 0 30px #96f226
+}
+#input {
+    border-radius: 0;
+    color: #96f226;
+    width: 300px;
+}
+#input:hover {
+    background: #656565
+}
+#input:active {
+    box-shadow: 0 0 30px #96f226
+}
+#input:focus {
+    box-shadow: 0 0 30px #96f226
+}
+.ui-tooltip {
+    color: #96f226;
+    border-radius: 0;
+    box-shadow: 0 0
+}
+.ui-autocomplete {
+    background: #c7c9ff;
+    border-radius: 0;
+    width: 200px;
+}
+.ui-autocomplete.source:hover {
+    background: #f0f531;
+}
+.ui-helper-hidden-accessible {
+    display:none;
+}
+
+.ui-menu .ui-menu-item a{
+    background:red;
+    height:10px;
+    font-size:8px;
+}
+
+.padding-top{
+    padding-top: 24px;
+}
+
+.inline {
+    display: inline;
+}
+.right-margin {
+    margin-right: 24px;
+}
+.schampane {
+    background-color: BlanchedAlmond;
+}
