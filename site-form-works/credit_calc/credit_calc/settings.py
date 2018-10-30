@@ -115,6 +115,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'your secret key'
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
 try:
     from .settings_local import *
 except ImportError:
