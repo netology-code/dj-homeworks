@@ -1,0 +1,4 @@
+id;name;price;release_date;lte_exists
+1;Samsung Galaxy Edge 2;73000;2016-12-12;True;
+2;Iphone X;80000;2017-06-01;True;
+3;Nokia 8;20000;2013-01-20;False;
