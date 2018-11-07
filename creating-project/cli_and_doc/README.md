@@ -9,10 +9,10 @@
 
 ## Реализация
 
-* Создадим `django` проект `cli_and_docs` (Используем `Django 2.1.x`)
+* Создадим `django` проект `cli_and_docs` (Используем `Django 2.1.x`).
 * Добавим управляющую команду `createadmin`, которая позволит создать пользователя с правами администратора,
   не проверяя введенный пароль на сложность. При создании команды, ориентируйтесь на стандартную команду
-  `createsuperuser`, которая определена здесь: `django.contrib.auth.management.commands.createsuperuser.Command()`
+  `createsuperuser`, которая определена здесь: `django.contrib.auth.management.commands.createsuperuser.Command()`.
 * А теперь попробуйте настроить стандартную команду `createsuperuser`, чтобы она не проверяла пароль на сложность.
 
 
