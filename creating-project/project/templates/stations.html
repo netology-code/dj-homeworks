@@ -2,6 +2,11 @@
 {% load static %}
 {% block title %}Карта автобусных остановок{% endblock %}
 {% block head %}
+    <!--
+        Для запуска на сервере, укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах.
+        Получить ключ можно в Кабинете разработчика: https://developer.tech.yandex.ru/keys/
+    -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
     <script type="text/javascript">
       ymaps.ready(init);
 
