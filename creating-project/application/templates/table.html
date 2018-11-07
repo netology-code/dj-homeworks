@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% load app_tags %}
+{% block title %}CSV: {{ csv_file }}{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <h1><a href="/table">{{ csv_file }}</a></h1>
+        </div>
+        <div class="row">
+            {% for col in columns %}
+                <div class="col-md-{{ col.width }} header">
+                    {{ col.name }}
+                </div>
+            {% endfor %}
+        </div>
+        {% for row in table %}
+            <div class="row">
+                {% for col in columns %}
+                    <div class="col-md-{{ col.width }}">
+                        {{ row|get_item:col.name }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

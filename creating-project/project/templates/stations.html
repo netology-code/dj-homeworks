@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Карта автобусных остановок{% endblock %}
+{% block head %}
+    <!--
+        Для запуска на сервере, укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах.
+        Получить ключ можно в Кабинете разработчика: https://developer.tech.yandex.ru/keys/
+    -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script type="text/javascript">
+      ymaps.ready(init);
+
+      function init() {
+        var myMap = new ymaps.Map("map", {
+          center: [{{ center.y }}, {{ center.x }}],
+          zoom: 13
+        }, {
+          searchControlProvider: 'yandex#search'
+        });
+
+        {% for item in stations %}
+          myMap.geoObjects
+            .add(new ymaps.Placemark([{{ item.latitude }}, {{ item.longitude }}], {
+              balloonContent: '{{ item.route_numbers }}',
+              iconCaption: '{{ item.name }}'
+            }, {
+              preset: 'islands#blueCircleDotIconWithCaption',
+              iconCaptionMaxWidth: '100'
+            }));
+        {% endfor %}
+      }
+    </script>
+{% endblock %}
+{% block content %}
+    <form method="GET" action="/stations/">
+        <div class="row form-top">
+            <div class="col-md-4 text-right align-middle form-top">
+                Выберите маршрут:
+            </div>
+            <div class="col-md-4 form-top">
+                <select name="route" class="form-control">
+                    {% for r in routes %}
+                        <option value="{{ r }}"{% if r == route %} selected{% endif %}>{{ r }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-4 form-top">
+                <input type="submit" value="Показать" class="btn btn-outline-primary"/>
+            </div>
+        </div>
+    </form>
+    <div id="map"></div>
+{% endblock %}
