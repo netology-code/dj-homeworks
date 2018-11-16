@@ -1,4 +1,3 @@
-import re
 from django.db import models
 
 
@@ -19,7 +18,5 @@ class Review(models.Model):
     text = models.TextField()
 
     def __str__(self):
-        return str(self.car) + ' ' + self.text_without_html()[:50]
+        return str(self.car) + ' ' + self.title
 
-    def text_without_html(self):
-        return re.sub('<.*?>', '', self.text)
