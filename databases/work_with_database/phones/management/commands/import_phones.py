@@ -1,3 +1,5 @@
+import csv
+
 from django.core.management.base import BaseCommand
 from phones.models import Phone
 
@@ -7,20 +9,12 @@ class Command(BaseCommand):
         pass
 
     def handle(self, *args, **options):
-        file = open('phones.csv', 'r')
+        with open('phones.csv', 'r') as csvfile:
 
-        for index, line in enumerate(file):
-            if index == 0:
-                continue
+            phone_reader = csv.reader(csvfile, delimiter=';')
+            # пропускаем заголовок
+            next(phone_reader)
 
-            line = line.split(';')
-            phone = Phone()
-            phone.id = line[0]
-            phone.name = line[1]
-            phone.image = line[2]
-            phone.price = line[3]
-            phone.release_date = line[4]
-            phone.lte_exists = line[5]
-            phone.save()
-
-        file.close()
+            for line in phone_reader:
+                # TODO: Добавьте сохранение модели
+                pass
