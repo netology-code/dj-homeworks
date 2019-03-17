@@ -7,6 +7,11 @@ __pycache__/
 
 *.sqlite3
 env/
+NDJvenv/
 
 ### Project specific ###
 settings_local.py
+
+### Settings for visual studio code
+.vscode/
+run_venv.sh
