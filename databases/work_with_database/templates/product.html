@@ -7,8 +7,9 @@
         <div class="header">
             <h1>Телефон</h1>
         </div>
+        <a href="{% url 'catalog' %}" class="btn btn-primary card my-card">В каталог</a>
         <div class="content">
-
+            {% include "card.html" %}
         </div>
     </div>
 {% endblock %}

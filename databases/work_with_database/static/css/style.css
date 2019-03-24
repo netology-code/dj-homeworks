@@ -16,3 +16,10 @@
     font-weight: bold;
 }
 
+.card {
+    margin: 10px;
+}
+
+.my-card {
+    color: black;
+}

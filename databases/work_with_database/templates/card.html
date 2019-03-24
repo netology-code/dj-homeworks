@@ -1,0 +1,10 @@
+{% load static %}
+
+<div class="card" style="width: 18rem;">
+    <img src="{{ phone.image }}" class="card-img-top" alt="Изображение телефона">
+    <div class="card-body">
+        <h5 class="card-title name">{{ phone.name }}</h5>
+        <p class="card-text">Дата релиза: <span>{{ phone.release_date }}</span></p>
+        <a href="{% url 'product' phone.slug %}" class="btn btn-primary"><span class="price">{{ phone.price }}</span> ₽</a>
+    </div>
+</div>
