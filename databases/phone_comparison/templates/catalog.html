@@ -1,11 +1,71 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load static %}
+{% load getattribute %}
+{% load humanize %}
 
 {% block title %}Каталог{% endblock %}
 {% block content %}
-    <div class="container">
-        <div class="header">
+    <div class='container'>
+        <div class='header'>
             <h1>Сравнение телефонов</h1>
+            <div class="table-responsive">
+                <table class='table table-striped table-responsive'>
+                    {% for characteristic in characteristics %}
+                        {% if characteristic.show %}
+                            <tr scope='row'>
+                                <td>
+                                    {{ characteristic.verbose_name }}
+                                </td>
+                                {% for phone in phones %}
+                                    {% with phone|getattribute:characteristic.name as phone_characteristic %}
+                                        {% if characteristic.verbose_name == 'Модель' %}
+                                            <th scope='col'>
+                                                {{ phone_characteristic }}
+                                            </th>
+                                        {% else %}
+                                            <td>
+                                                {% if characteristic.verbose_name == 'Камера' %}
+                                                    {% with phone_characteristic.all as cameras %}
+                                                        {% if cameras|length > 1 %}
+                                                            <ul>
+                                                                {% for camera in cameras %}
+                                                                    <li>
+                                                                        {{ camera }}
+                                                                    </li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        {% else %}
+                                                            {{ cameras.0 }}
+                                                        {% endif %}
+                                                    {% endwith %}
+                                                {% elif characteristic.verbose_name == 'Цена' %}
+                                                    <span>{{ phone_characteristic|intcomma }}</span> ₽
+                                                {% elif characteristic.verbose_name == 'Размер оперативной памяти' %}
+                                                    <span>{{ phone_characteristic }}</span> Гб
+                                                {% else %}
+                                                    {% if phone_characteristic %}
+                                                        {% if phone_characteristic is True %}
+                                                            Есть
+                                                        {% else %}
+                                                            {{ phone_characteristic }}
+                                                        {% endif %}
+                                                    {% else %}
+                                                        {% if phone_characteristic is None or phone_characteristic == '' %}
+                                                            —
+                                                        {% else %}
+                                                            Нет
+                                                        {% endif %}
+                                                    {% endif %}
+                                                {% endif %}
+                                            </td>
+                                        {% endif %} 
+                                    {% endwith %}
+                                {% endfor %}
+                            </tr>
+                        {% endif %}     
+                    {% endfor %}
+                </table>
+            </div>
         </div>
     </div>
 {% endblock %}
