@@ -1,6 +1,6 @@
 from collections import Counter
 
-from django.shortcuts import render_to_response, Http404
+from django.shortcuts import render_to_response
 
 # Для отладки механизма ab-тестирования используйте эти счетчики
 # в качестве хранилища количества показов и количества переходов.
@@ -24,14 +24,9 @@ def landing(request):
     # в зависимости от GET параметра ab-test-arg
     # который может принимать значения original и test
     # Так же реализуйте логику подсчета количества показов
-    if request.method == 'GET':
-        ab_test_arg = request.GET.get('ab-test-arg', 'original')
-        if ab_test_arg == 'test':
-            counter_show['test'] += 1
-            return render_to_response('landing_alternate.html')
-        elif ab_test_arg and ab_test_arg != 'original':
-            raise Http404('Нет такой страницы')
-    counter_show['original'] += 1
+    ab_test_arg = request.GET.get('ab-test-arg', 'original')
+    if ab_test_arg == 'test':
+        return render_to_response('landing_alternate.html')
     return render_to_response('landing.html')
 
 

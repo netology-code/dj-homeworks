@@ -15,18 +15,19 @@ def bus_stations(request):
     try:
         current_page = int(request.GET.get('page', '1'))
     except ValueError:
-        raise Http404('Страница не найдена')
+        current_page = 1
 
     with open(settings.BUS_STATION_CSV, 'rt', encoding='cp1251') as f:
         reader = csv.DictReader(f)
         bus_stations = []
-        for_next_page = []
+        for_next_page = False
         try:
             for _ in range((current_page - 1) * 10):
                 next(reader)
             for _ in range(10):
-                bus_stations.append(next(reader)) 
-            for_next_page.append(next(reader))
+                bus_stations.append(next(reader))
+            if next(reader):
+                for_next_page = True
         except StopIteration:
             pass  
 

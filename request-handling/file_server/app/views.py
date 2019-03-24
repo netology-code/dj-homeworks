@@ -1,6 +1,6 @@
 import datetime
 
-from django.shortcuts import render
+from django.shortcuts import render, Http404
 from django.views.generic import TemplateView
 
 import os
@@ -54,8 +54,11 @@ def file_content(request, name):
     #     context={'file_name': 'file_name_1.txt', 'file_content': 'File content!'}
     # )
 
-    with open(os.path.join(settings.FILES_PATH, name), 'rt', encoding='utf-8') as f:
-        file_content = f.read()
+    try:
+        with open(os.path.join(settings.FILES_PATH, name), 'rt', encoding='utf-8') as f:
+            file_content = f.read()
+    except FileNotFoundError:
+        raise Http404()
         
     return render(
         request,
