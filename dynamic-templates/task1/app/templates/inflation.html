@@ -1,3 +1,5 @@
+{% load get_cell_color %}
+{% load repalce_dot_to_comma %}
 <!DOCTYPE html>{% load static %}
 <html>
   <head>
@@ -19,6 +21,44 @@
         <ul class="col s12 m8">
         
         <!-- Ваша логика -->
+        {% if inflation_data %}
+          <table>
+            <thead>
+              {% for head in inflation_data.0 %}
+                <th>
+                  {{ head }}
+                </th>
+              {% endfor %}
+            </thead>
+            <tbody>
+              {% for data_line in inflation_data %}
+                <tr>
+                  {% for key, value in data_line.items %}
+                    {% if key == 'Суммарная' %}
+                      <td style="background-color: lightgray">
+                        {{ value|repalce_dot_to_comma }}
+                      </td>
+                    {% elif key == 'Год' %}
+                      <th>
+                        {{ value }}
+                      </th>
+                    {% else %}
+                      {% if value %}
+                        <td style="background-color: {{ value|get_cell_color }}">
+                          {{ value|repalce_dot_to_comma }}
+                        </td>
+                      {% else %}
+                        <td>
+                          -
+                        </td>
+                      {% endif %}
+                    {% endif %}
+                  {% endfor %}
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        {% endif %}
 
         </ul>
       </div>

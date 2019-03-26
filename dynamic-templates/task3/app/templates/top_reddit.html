@@ -25,10 +25,12 @@
               <div class="card-content white-text">
                 <span class="card-title">{{ post.data.title }}
                 </span>
-                {{ post.data.selftext }}
-                <p>Дата: {{ post.data.created_utc }}</p>
-              <p>Рейтинг: {{ post.data.score }}</p>
-                <p>Число комментариев: {{ post.data.num_comments|format_num_comments}}</p>
+                <blockquote>
+                  {{ post.data.selftext|format_selftext:15 }}
+                </blockquote>
+                <p>Время публикации: {{ post.data.created_utc|format_date }}</p>
+                <p>Рейтинг: <span class="{{ post.data.score|color_score }}-text text-lighten-2">{{ post.data.score|format_score }}</span></p>
+                <p>{{ post.data.num_comments|format_num_comments }}</p>
               </div>
               <div class="card-action">
                 <a href="{{ post.data.url }}">Ссылка на материал</a>
