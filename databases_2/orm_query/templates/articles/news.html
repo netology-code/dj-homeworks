@@ -12,10 +12,9 @@
         <h4 class="card-title">
           <a href="#">{{ article.title }}</a>
         </h4>
+        <p>Автор: <span class="badge badge-primary">{{ article.author }}</span></p> 
         <p class="card-text">{{ article.text }}</p>
-        {% for scope in article.scopes.all %}
-          <span class="badge {% if scope.is_main %}badge-primary{% else %}badge-secondary{% endif %}">{{ scope.topic }}</span>
-        {% endfor %}
+        <p>Жанр: <span class="badge badge-primary">{{ article.genre }}</span></p> 
       </div>
     </div>
   </div>
