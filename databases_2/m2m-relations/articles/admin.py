@@ -28,7 +28,7 @@ class ArticleScopeInline(admin.TabularInline):
 
 @admin.register(Scope)
 class ScopeAdmin(admin.ModelAdmin):
-    inlines = [ArticleScopeInline]
+    pass
 
 
 @admin.register(Article)

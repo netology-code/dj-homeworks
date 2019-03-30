@@ -33,7 +33,6 @@ class Scope(models.Model):
         return 
 
 
-
 class ArticleScope(models.Model):
 
     is_main = models.BooleanField(verbose_name='Основной')
@@ -43,6 +42,7 @@ class ArticleScope(models.Model):
     class Meta:
         verbose_name = 'Тематика статьи'
         verbose_name_plural = 'Тематики статьи'
+        ordering = ['-is_main', 'scope__topic']
 
     def __str__(self):
         return f'{self.article}-{self.scope}'
