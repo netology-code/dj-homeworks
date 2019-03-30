@@ -10,10 +10,18 @@
 
         <div class="sort-block">
             {# Здесь должен быть раздел с сортировкой #}
+            <a href="?order_by=-price" class="btn btn-primary">Цена ▼</a>
+            <a href="?order_by=price" class="btn btn-primary">Цена ▲</a>
+            <a href="?order_by=-name" class="btn btn-primary">Имя ▼</a>
+            <a href="?order_by=name" class="btn btn-primary">Имя ▲</a>
         </div>
 
         <div class="content">
-            {# Здесь должен отображаться каталог с телефонами #}
+            <div class="row">
+                {% for phone in phones %}
+                    {% include "card.html" %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -2,3 +2,7 @@
     margin-top: 30px;
     margin-bottom: 70px;
 }
+
+th, td {
+    width: 300px;
+}
