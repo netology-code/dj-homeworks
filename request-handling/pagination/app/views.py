@@ -12,10 +12,7 @@ def index(request):
 
 def bus_stations(request):
 
-    try:
-        current_page = int(request.GET.get('page', '1'))
-    except ValueError:
-        current_page = 1
+    current_page = int(request.GET.get('page', '1'))
 
     with open(settings.BUS_STATION_CSV, 'rt', encoding='cp1251') as f:
         reader = csv.DictReader(f)
