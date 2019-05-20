@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import InflationView
+from .views import inflation_view
 
 
 urlpatterns = [
-    path('', InflationView.as_view(), name='main'),
+    path('', inflation_view, name='main'),
     path('admin/', admin.site.urls),
 ]

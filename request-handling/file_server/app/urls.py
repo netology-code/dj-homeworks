@@ -4,7 +4,7 @@ from django.urls import path
 
 
 urlpatterns = [
-    # Определите схему урлов с привязкой к отображениям .views.FileList и .views.file_content
+    # Определите схему урлов с привязкой к отображениям .views.file_list и .views.file_content
     # path(..., name='file_list'),
     # path(..., name='file_list'),
     # path(..., name='file_content'),
