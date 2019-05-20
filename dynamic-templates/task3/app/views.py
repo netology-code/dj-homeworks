@@ -1,6 +1,5 @@
 import requests
 from django.shortcuts import render
-from django.views.generic import TemplateView
 
 
 def do_request():
@@ -13,14 +12,12 @@ def convert_post(post):
     yield post
 
 
-class TopRedditView(TemplateView):
+def top_reddit_view(request):
     template_name = 'top_reddit.html'
 
-    def get(self, request, *args, **kwargs):
-        posts = do_request()
-        context = {
-            'posts': posts,
-            'prefix': 'https://reddit.com'
-        }
-        return render(request, self.template_name,
-                      context)
+    posts = do_request()
+    context = {
+        'posts': posts,
+        'prefix': 'https://reddit.com'
+    }
+    return render(request, template_name, context)

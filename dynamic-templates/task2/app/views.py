@@ -1,38 +1,39 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
 
 
-class HomeView(TemplateView):
+def home_view(request):
     template_name = 'app/home.html'
+    return render(request, template_name)
 
 
-class AboutView(TemplateView):
+def about_view(request):
     template_name = 'app/about.html'
+    return render(request, template_name)
 
 
-class ContactsView(TemplateView):
+def contacts_view(request):
     template_name = 'app/contacts.html'
+    return render(request, template_name)
 
 
-class ExamplesView(TemplateView):
+def examples_view(request):
     template_name = 'app/examples.html'
 
-    def get(self, request, *args, **kwargs):
-        items = [{
-            'title': 'Apple II',
-            'text': 'Легенда',
-            'img': 'ii.jpg'
-        }, {
-            'title': 'Macintosh',
-            'text': 'Свежие новинки октября 1983-го',
-            'img': 'mac.jpg'
-        }, {
-            'title': 'iMac',
-            'text': 'Оригинальный и прозрачный',
-            'img': 'imac.jpg'
-        }]
-        context = {
-            'items': items
-        }
-        return render(request, self.template_name,
-                      context)
+    items = [{
+        'title': 'Apple II',
+        'text': 'Легенда',
+        'img': 'ii.jpg'
+    }, {
+        'title': 'Macintosh',
+        'text': 'Свежие новинки октября 1983-го',
+        'img': 'mac.jpg'
+    }, {
+        'title': 'iMac',
+        'text': 'Оригинальный и прозрачный',
+        'img': 'imac.jpg'
+    }]
+    context = {
+        'items': items
+    }
+    return render(request, template_name,
+                  context)

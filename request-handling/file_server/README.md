@@ -11,12 +11,12 @@
 * отображение списка файлов с фильтрацией по дате `/2018-01-01/`
 * отображение отдельных файлов `/file_name.txt`
 
-Для первых двух ситуаций использовать один класс для отображения: `app.views.FileList`
+Для первых двух ситуаций использовать одну функцию для отображения: `app.views.file_list`
 Для второй ситуации реализовать конвертер для преобразования даты
 `datetime.date` в указанный в задании вид и наоборот.
 Для третьей ситуации использовать функцию для отображения: `app.views.file_content`
 
-В классе `app.views.FileList` и функции `app.views.file_content`
+В функциях `app.views.file_list` и `app.views.file_content`
 реализовать логику для формирования контекста.
 Директорию, файлы которой нужно отображать, берите из настроек `settings.FILES_PATH`
 
@@ -52,21 +52,6 @@ urlpatterns = [
 ]
 ```
 
-Для классов принимаемые аргументы прописываются в методе `get_context_data`.
-а привязка класса происходит с помощью метода `as_view()`:
-
-
-```python
-class ViewClass(TemplateView):
-    template_name = 'index.html'
-    def get_context_data(self, arg1=None):
-        return {'arg1': arg1}
-
-
-urlpatterns = [
-    path('', ViewClass.as_view())
-]
-```
 
 ![Пример результата](./res/result.gif)
 
