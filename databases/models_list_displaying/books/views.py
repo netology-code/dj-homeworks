@@ -1,6 +1,7 @@
-from django.views import generic
+from django.shortcuts import render
 
 
-class BookListView(generic.ListView):
-    def get_context_data(self, **kwargs):
-        pass
+def books_view(request):
+    template = 'books/books_list.html'
+    context = {}
+    return render(request, template, context)

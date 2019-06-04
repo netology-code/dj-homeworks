@@ -2,14 +2,12 @@ from django.shortcuts import render
 
 
 def show_catalog(request):
-    return render(
-        request,
-        'catalog.html',
-    )
+    template = 'catalog.html'
+    context = {}
+    return render(request, template, context)
 
 
 def show_product(request, slug):
-    return render(
-        request,
-        'product.html',
-    )
+    template = 'product.html'
+    context = {}
+    return render(request, template, context)
