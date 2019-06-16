@@ -2,18 +2,18 @@
 
 {% block content %}
 <div class="margin-left">
-    <h2>Товар {{ object.name }}</h2>
-    <img src="{{ MEDIA_URL }}{{ object.img.url }}" class="preview">
-    <h4>Обзоры:</h4>
+    <h2>Товар {{ product.name }}</h2>
+    <img src="{{ MEDIA_URL }}{{ product.img.url }}" class="preview">
+    <h4>Отзывы:</h4>
     <ul>
         {% for review in reviews %}
             <li><p>{{review.text}}</p></li>
         {% endfor %}
     </ul>
     {% if is_review_exist %}
-        <p>Обзор от вас уже есть</p>
+        <p>Отзыв от вас уже есть</p>
     {% else %}
-        <p>Можете добавить обзор</p>
+        <p>Можете добавить отзыв</p>
     {% endif %}
 
     <form action="{% url 'product_detail' product.id %}" method="POST">

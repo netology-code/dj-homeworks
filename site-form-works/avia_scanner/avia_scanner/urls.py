@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from app.views import TicketPageView, cities_lookup
+from app.views import ticket_page_view, cities_lookup
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/city_ajax', cities_lookup),
-    path('', TicketPageView.as_view()),
+    path('', ticket_page_view, name='tickets'),
 ]

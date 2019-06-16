@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app.views import CalcView
+from app.views import calc_view
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', CalcView.as_view())
+    path('', calc_view, name='main')
 ]
