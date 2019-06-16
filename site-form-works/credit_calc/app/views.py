@@ -1,8 +1,14 @@
-from django.views.generic import TemplateView
+from django.shortcuts import render
 
 from .forms import CalcForm
 
 
-class CalcView(TemplateView):
-    template_name = "app/calc.html"
+def calc_view(request):
+    template = "app/calc.html"
 
+    form = CalcForm
+    context = {
+        'form': form
+    }
+
+    return render(request, template, context)
