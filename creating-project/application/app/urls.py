@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.http import HttpResponseRedirect
 from django.urls import path
-from .views import TableView
+from .views import table_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('table/', TableView.as_view()),
+    path('table/', table_view),
     path('', lambda x: HttpResponseRedirect('/table/')),
 ]
