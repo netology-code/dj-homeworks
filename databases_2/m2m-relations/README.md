@@ -44,7 +44,7 @@ class ObjectAdmin(admin.ModelAdmin):
 ```
 
 Вместо `Object` должна быть модель, имеющая связь многие-ко-многим,
-а вместо `Relationship` должна быть модель связи, указанная как `though` для связи.
+а вместо `Relationship` должна быть модель связи, указанная как `through` для связи (Подробнее: https://docs.djangoproject.com/en/2.2/ref/models/fields/#django.db.models.ManyToManyField.through).
 Все остальное django реализует автоматически.
 
 Однако в этой задаче вам потребуется добавить дополнительную проверку при сохранении объекта.

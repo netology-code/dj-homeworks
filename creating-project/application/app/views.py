@@ -1,7 +1,7 @@
 import csv
 
 from django.shortcuts import render
-from django.views import View
+
 
 CSV_FILENAME = 'phones.csv'
 COLUMNS = [
@@ -13,20 +13,24 @@ COLUMNS = [
 ]
 
 
-class TableView(View):
+def table_view(request):
+    template = 'table.html'
+    with open(CSV_FILENAME, 'rt') as csv_file:
+        header = []
+        table = []
+        table_reader = csv.reader(csv_file, delimiter=';')
+        for table_row in table_reader:
+            if not header:
+                header = {idx: value for idx, value in enumerate(table_row)}
+            else:
+                row = {header.get(idx) or 'col{:03d}'.format(idx): value
+                       for idx, value in enumerate(table_row)}
+                table.append(row)
 
-    def get(self, request):
-        with open(CSV_FILENAME, 'rt') as csv_file:
-            header = []
-            table = []
-            table_reader = csv.reader(csv_file, delimiter=';')
-            for table_row in table_reader:
-                if not header:
-                    header = {idx: value for idx, value in enumerate(table_row)}
-                else:
-                    row = {header.get(idx) or 'col{:03d}'.format(idx): value
-                           for idx, value in enumerate(table_row)}
-                    table.append(row)
-
-            result = render(request, 'table.html', {'columns': COLUMNS, 'table': table, 'csv_file': CSV_FILENAME})
-        return result
+        context = {
+            'columns': COLUMNS, 
+            'table': table, 
+            'csv_file': CSV_FILENAME
+        }
+        result = render(request, template, context)
+    return result
