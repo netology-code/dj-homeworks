@@ -32,7 +32,17 @@ def file_list(request):
 def file_content(request, name):
     # Реализуйте алгоритм подготавливающий контекстные данные для шаблона по примеру:
     file_list = os.listdir(settings.FILES_PATH)
+    file_content = []
 
+    for file in file_list:
+        with open(os.path.join(settings.FILES_PATH, file), 'r') as f:
+            file_content.append(
+                {
+                    'name' : file,
+                    'file_content' : f.read()
+
+                }
+            )
     return render(
         request,
         'file_content.html',
@@ -40,3 +50,15 @@ def file_content(request, name):
     )
 
 
+
+import os
+fp = r'C:\Users\54292\Desktop\My folder\Python\Netology\dj-homeworks\request-handling\file_server\files'
+file_list = os.listdir(r'C:\Users\54292\Desktop\My folder\Python\Netology\dj-homeworks\request-handling\file_server\files')
+file_content = []
+
+name = 'server.03'
+
+for file in file_list:
+    if name == file:
+        with open(os.path.join(fp, file), 'r') as file_content:
+            print(file_content.read())
