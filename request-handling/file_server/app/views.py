@@ -5,9 +5,14 @@ from app import settings
 import os
 
 
-def file_list(request):
+def convert_date(some_int):
+    return datetime.datetime.fromtimestamp(some_int).strftime("%d %B %Y %H:%M")
+
+def unconvert_date(date):
+    return datetime.datetime.strptime(' '.join(date.split(' ')[:3]), "%d %B %Y").strftime("%d %m %Y")
+
+def file_list(request, year=None, month=None, day=None):
     template_name = 'index.html'
-    
     file_list = os.listdir(settings.FILES_PATH)
     files = []
 
@@ -15,50 +20,40 @@ def file_list(request):
         files.append(
             {
                 'name' : file,
-                'ctime' : datetime.datetime.fromtimestamp(os.stat(os.path.join(settings.FILES_PATH, file))[9]).strftime("%d %B %Y %H:%M"),
-                'mtime' : datetime.datetime.fromtimestamp(os.stat(os.path.join(settings.FILES_PATH, file))[8]).strftime("%d %B %Y %H:%M")
+                'ctime' : convert_date(os.stat(os.path.join(settings.FILES_PATH, file))[9]),
+                'mtime' : convert_date(os.stat(os.path.join(settings.FILES_PATH, file))[8])
             }
         )
 
-    # Реализуйте алгоритм подготавливающий контекстные данные для шаблона по примеру:
-    context = {
-        'files': files,
-        'date': datetime.date(2018, 1, 1)  # Этот параметр необязательный
-    }
+    if year != None and month != None and day != None:
+        search_date = datetime.date(year, month, day).strftime("%d %m %Y")
+        searched_file = []
+        for file in files:
+            if unconvert_date(file['mtime']) == search_date:
+                searched_file.append(file)
+
+        # Реализуйте алгоритм подготавливающий контекстные данные для шаблона по примеру:
+        context = {
+            'files': searched_file
+        }
+        print(context)
+        return render(request, template_name, context)
+
+    context = {'files': files['files']}
 
     return render(request, template_name, context)
 
 
 def file_content(request, name):
+    template_name = 'file_content.html'
     # Реализуйте алгоритм подготавливающий контекстные данные для шаблона по примеру:
-    file_list = os.listdir(settings.FILES_PATH)
     file_content = []
+    with open(os.path.join(settings.FILES_PATH, name), 'r') as file:
+        for line in file:
+            file_content.append(line)
 
-    for file in file_list:
-        with open(os.path.join(settings.FILES_PATH, file), 'r') as f:
-            file_content.append(
-                {
-                    'name' : file,
-                    'file_content' : f.read()
-
-                }
-            )
     return render(
         request,
-        'file_content.html',
-        context={'file_name': 'server.01', 'file_content': 'File content!'}
+        template_name,
+        context={'file_name': name, 'file_content': file_content}
     )
-
-
-
-import os
-fp = r'C:\Users\54292\Desktop\My folder\Python\Netology\dj-homeworks\request-handling\file_server\files'
-file_list = os.listdir(r'C:\Users\54292\Desktop\My folder\Python\Netology\dj-homeworks\request-handling\file_server\files')
-file_content = []
-
-name = 'server.03'
-
-for file in file_list:
-    if name == file:
-        with open(os.path.join(fp, file), 'r') as file_content:
-            print(file_content.read())
