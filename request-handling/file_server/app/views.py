@@ -39,9 +39,15 @@ def file_list(request, year=None, month=None, day=None):
         print(context)
         return render(request, template_name, context)
 
-    context = {'files': files['files']}
+    context = {'files': files}
 
     return render(request, template_name, context)
+
+
+def make_content(file_content):
+    content = ''.join(file_content)
+
+    return content
 
 
 def file_content(request, name):
@@ -55,5 +61,5 @@ def file_content(request, name):
     return render(
         request,
         template_name,
-        context={'file_name': name, 'file_content': file_content}
+        context={'file_name': name, 'file_content': make_content(file_content)}
     )
