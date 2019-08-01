@@ -8,8 +8,11 @@ import os
 def convert_date(some_int):
     return datetime.datetime.fromtimestamp(some_int).strftime("%d %B %Y %H:%M")
 
+
 def unconvert_date(date):
-    return datetime.datetime.strptime(' '.join(date.split(' ')[:3]), "%d %B %Y").strftime("%d %m %Y")
+    return datetime.datetime.strptime(
+        ' '.join(date.split(' ')[:3]), "%d %B %Y").strftime("%d %m %Y")
+
 
 def file_list(request, year=None, month=None, day=None):
     template_name = 'index.html'
@@ -19,13 +22,13 @@ def file_list(request, year=None, month=None, day=None):
     for file in file_list:
         files.append(
             {
-                'name' : file,
-                'ctime' : convert_date(os.stat(os.path.join(settings.FILES_PATH, file))[9]),
-                'mtime' : convert_date(os.stat(os.path.join(settings.FILES_PATH, file))[8])
+                'name': file,
+                'ctime': convert_date(os.stat(os.path.join(settings.FILES_PATH, file))[9]),
+                'mtime': convert_date(os.stat(os.path.join(settings.FILES_PATH, file))[8])
             }
         )
 
-    if year != None and month != None and day != None:
+    if year is not None and month is not None and day is not None:
         search_date = datetime.date(year, month, day).strftime("%d %m %Y")
         searched_file = []
         for file in files:

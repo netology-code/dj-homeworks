@@ -7,5 +7,5 @@ from app.views import file_list, file_content
 urlpatterns = [
     path('file/<str:name>/', file_content, name='file_content'),
     path('<int:year>-<int:month>-<int:day>/', file_list, name='file_list_filtered'),
-    path('', file_list, name='file_list')  
+    path('', file_list, name='file_list')
 ]

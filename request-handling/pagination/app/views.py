@@ -5,6 +5,7 @@ from django.urls import reverse
 import urllib.parse as urllib
 from django.core.paginator import Paginator
 
+
 def read_file(file_path=settings.BUS_STATION_CSV):
     bus_stations = []
     with open(file_path, newline='') as csvfile:
@@ -12,12 +13,12 @@ def read_file(file_path=settings.BUS_STATION_CSV):
         for row in reader:
             bus_stations.append(
                 {
-                    'Name' : row['Name'],
-                    'Street' : row['Street'],
-                    'District' : row['District']
+                    'Name': row['Name'],
+                    'Street': row['Street'],
+                    'District': row['District']
                 }
             )
-    
+
     return bus_stations
 
 
@@ -44,10 +45,9 @@ def bus_stations(request):
         next_page = 'bus_stations?page=2'
         prev_page = ''
 
-
     return render_to_response('index.html', context={
         'bus_stations': bus_stations,
         'current_page': page,
-        'prev_page_url' : '',
-        'next_page_url' : next_page
+        'prev_page_url': '',
+        'next_page_url': next_page
     })
