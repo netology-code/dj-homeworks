@@ -7,10 +7,12 @@ def index(request):
 
 
 def bus_stations(request):
+    current_page = 1
+    next_page_url = 'write your url'
     return render_to_response('index.html', context={
         'bus_stations': [{'Name': 'название', 'Street': 'улица', 'District': 'район'}],
-        'current_page': 1,
+        'current_page': current_page,
         'prev_page_url': None,
-        'next_page_url': 'bus_stations/?page=2',
+        'next_page_url': next_page_url,
     })
 
