@@ -47,7 +47,7 @@ def view_func(request, arg1=None):
 
 urlpatterns = [
     path('', view_func),  # В таком случае этот вариант сработает и в arg1 будет None
-    path('<arg1>/', view_func),  # а в таком случае в arg1 будет приходить строка указанная в пути
+    path('<arg1>/', view_func),  # а в таком случае в arg1 будет приходить строка, указанная в пути
 ]
 ```
 
