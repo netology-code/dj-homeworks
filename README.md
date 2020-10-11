@@ -16,13 +16,13 @@
 
 ## Блок 3. Взаимодействие с сайтом 
 
-3.1. [Взаимодействие с сайтом](./site-form-works/)
+3.1. [Знакомство с API на примере Django REST framework](./drf-intro/)
 
-3.2. [Персонализация сайта](./site-personalization/)
+3.2. [Django REST framework: фильтрация, валидация и аутентификация](./drf-auth-and-validation/)
 
-3.3. [Создание и поддержка проекта](./creating-project/)
+3.3. [Тестирование Django-приложений с использованием Pytest](./django-testing/)
 
-3.4. Работа с API
+3.4. [Создание и поддержка проекта](./creating-project/)
 
 
 ## Требования
