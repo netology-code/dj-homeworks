@@ -1,0 +1,41 @@
+# примеры API-запросов
+
+# получение объявлений
+GET localhost:8000/api/advertisements/
+Content-Type: application/json
+
+###
+# создание объявления
+POST localhost:8000/api/advertisements/
+Content-Type: application/json
+Authorization: Token 902ef055a9ac93f18327f1f9c45ab059f1a62c7d
+
+{
+  "title": "Шкаф IKEA",
+  "description": "Срочно"
+}
+
+###
+
+# попытка поменять объявление
+PATCH localhost:8000/api/advertisements/1/
+Content-Type: application/json
+Authorization: Token 902ef055a9ac93f18327f1f9c45ab059f1a62c7d
+
+{
+  "status": "CLOSED"
+}
+
+###
+
+# фильтрация по создателю
+GET localhost:8000/api/advertisements/?creator=3
+Content-Type: application/json
+
+###
+
+# фильтрация по дате
+GET localhost:8000/api/advertisements/?created_at_before=2020-10-01
+Content-Type: application/json
+
+###
