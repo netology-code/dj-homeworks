@@ -23,9 +23,9 @@
       {% endfor %}
       </tbody>
     </table>
-    {% if prev_page_url %}<a class="button button-primary" href="{{ prev_page_url }}">⟵</a>{% endif %}
+    {% if prev_page_url %}<a class="button button-primary" href="?page={{ prev_page_url }}">⟵</a>{% endif %}
     <a class="button disabled" href="">{{ current_page }}</a>
-    {% if next_page_url %}<a class="button button-primary" href="{{ next_page_url }}">⟶</a>{% endif %}
+    {% if next_page_url %}<a class="button button-primary" href="?page={{ next_page_url }}">⟶</a>{% endif %}
   </div>
 </div>
 {% endblock %}
