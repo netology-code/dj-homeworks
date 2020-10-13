@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <title>Инфляция в России</title>
+    <style>
+        .block :last-child {
+            background: gray;
+            }
+        td.col1 { background: indianred}
+        td.col2 { background: rosybrown}
+        td.col3 { background: red}
+    </style>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -17,9 +25,32 @@
       <div class="row">
         <h1 class="col s12">Инфляция в России</h1>
         <div class="col s12 m8">
-        
-        <!-- Ваша логика -->
 
+            <table>
+            <tr>
+                {% for colname in header %}
+                    <th>{{ colname }}</th>
+                {% endfor %}
+            </tr>
+
+
+                {% for row in data %}
+                <tr class="block">
+                {% for ele in row %}
+                    {% if ele >= 1 and ele <= 2 %}
+                        <td class="col2">{{ ele }}</td>
+                    {% elif ele > 2 and ele <= 3 %}
+                        <td class="col1">{{ ele }}</td>
+                    {% elif ele > 3 %}
+                        <td class="col3">{{ ele }}</td>
+                    {% else %}
+                        <td> {{ ele }}</td>
+                    {% endif %}
+                {% endfor %}
+
+                {% endfor %}
+                </tr>
+            </table>
         </div>
       </div>
     {% endblock %}
