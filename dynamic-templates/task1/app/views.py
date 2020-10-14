@@ -14,19 +14,13 @@ def inflation_view(request):
                 header = row
                 linecount += 1
             else:
-                rows.append(row)
-
-        for r in rows:
-            for i, val in enumerate(r[1:]):
-
-                if '.' in val or r[i] is not None:
-                    r[i] = float(r[i])
-
-                #if val == '':
-                 #   r[i] = '-'
-                #if 1 < int(val) < 2:
-                 #   r[i].style
-
+                converted_data = [row[0]]
+                for i in row[1:]:
+                    try:
+                        converted_data.append(float(i))
+                    except:
+                        converted_data.append('-')
+                rows.append(converted_data)
 
     # чтение csv-файла и заполнение контекста
     context = {'data': rows, 'header': header}

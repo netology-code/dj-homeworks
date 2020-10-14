@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Инфляция в России</title>
     <style>
-        .block :last-child {
-            background: gray;
-            }
+
+        .block :last-child { background: gray}
         td.col1 { background: indianred}
-        td.col2 { background: rosybrown}
+        td.col2 { background: coral}
         td.col3 { background: red}
+        td.col4 {background: green}
+
     </style>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,7 +25,7 @@
     {% block content %}
       <div class="row">
         <h1 class="col s12">Инфляция в России</h1>
-        <div class="col s12 m8">
+        <div class="col s12 m12">
 
             <table>
             <tr>
@@ -39,12 +40,19 @@
                 {% for ele in row %}
                     {% if ele >= 1 and ele <= 2 %}
                         <td class="col2">{{ ele }}</td>
-                    {% elif ele > 2 and ele <= 3 %}
+
+                    {% elif ele > 2 and ele <= 5 %}
                         <td class="col1">{{ ele }}</td>
-                    {% elif ele > 3 %}
+
+                    {% elif ele > 5 %}
                         <td class="col3">{{ ele }}</td>
+
+                    {% elif ele < 0 %}
+                        <td class="col4">{{ ele }}</td>
+
                     {% else %}
                         <td> {{ ele }}</td>
+
                     {% endif %}
                 {% endfor %}
 
