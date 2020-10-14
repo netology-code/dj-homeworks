@@ -6,6 +6,7 @@ import io
 def inflation_view(request):
     template_name = 'inflation.html'
     rows = []
+
     with io.open('inflation_russia.csv', encoding='utf-8') as isfile:
         file = csv.reader(isfile, delimiter=';')
         linecount = 0
