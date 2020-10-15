@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Task #2</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        .active {
+            background-color: rgba(0,0,0,0.1)!important;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="row">
+      <div class="nav-wrapper col s12">
+        <a href="{% url 'home' %}" id="home" class="brand-logo">Компьютеры</a>
+            <ul class="right hide-on-med-and-down">
+              <li id="examples"><a href="{% url 'examples' %}">Примеры</a></li>
+              <li id="contacts"><a href="{% url 'contacts' %}">Контакты</a></li>
+              <li id="about"><a href="{% url 'about' %}">О проекте</a></li>
+            </ul>
+
+      </div>
+    </nav>
+{% block content %}
+
+{% endblock %}
+</body>
+<script>
+        let link = document.location.pathname,
+            str,
+            name;
+
+        if (link == '/') {
+            name = document.querySelector('.brand-logo');
+        } else {
+            str = link.substr(1, link.length-2);
+            name = document.querySelector('#' + str);
+        }
+
+        switch (str) {
+        case 'examples':
+            name.classList.add('active');
+            break;
+        case 'contacts':
+
+            name.classList.add('active');
+            break;
+        case 'about':
+            name.classList.add('active');
+            break;
+
+        default:
+            name.classList.add('active');
+
+        }
+
+</script>
+</html>
