@@ -19,4 +19,4 @@ class Command(BaseCommand):
                 result = Phone(
                     name=line[1], image=line[2], price=line[3], release_date=line[4], lte_exists=line[5])
                 result.save()
-                print(line)
+                
