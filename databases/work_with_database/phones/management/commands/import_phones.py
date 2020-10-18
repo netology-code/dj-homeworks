@@ -9,12 +9,14 @@ class Command(BaseCommand):
         pass
 
     def handle(self, *args, **options):
-        with open('phones.csv', 'r') as csvfile:
+        with open('phones.csv', 'r') as isfile:
 
-            phone_reader = csv.reader(csvfile, delimiter=';')
+            phone_reader = csv.reader(isfile, delimiter=';')
             # пропускаем заголовок
             next(phone_reader)
 
             for line in phone_reader:
-                # TODO: Добавьте сохранение модели
-                pass
+                result = Phone(
+                    name=line[1], image=line[2], price=line[3], release_date=line[4], lte_exists=line[5])
+                result.save()
+                print(line)

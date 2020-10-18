@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Телефон{% endblock %}
+{% block title %}{{ phone.slug }}{% endblock %}
 {% block content %}
     <div class="container">
-        <div class="header">
-            <h1>Телефон</h1>
-        </div>
-        <div class="content">
-
+        <div class="media">
+            <img class="mr-3" src="{{ phone.image }}" alt="image for phone">
+            <div class="media-body">
+                <h3 class="mt-0">{{ phone.nane }}</h3>
+                <div class="col"> Price: {{ phone.price }}</div>
+                <div class="col">Release_date: {{ phone.release_date }}</div>
+            </div>
         </div>
     </div>
 {% endblock %}
