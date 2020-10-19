@@ -1,5 +1,5 @@
 from django.db import models
-
+import django_tables2 as tables
 
 class Phone(models.Model):
     brand = models.TextField(blank=True)
@@ -17,3 +17,9 @@ class UniqPhone(models.Model):
     wifi = models.TextField(default='-')
     sd = models.TextField(default='-')
     name = models.ForeignKey('Phone', null=True, on_delete=models.SET_NULL)
+
+
+class PhoneTables(tables.Table):
+    class Meta:
+        model = UniqPhone
+        attrs = {'class': 'paleblue'}

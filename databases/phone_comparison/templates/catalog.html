@@ -1,111 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
+{% load render_table from django_tables2 %}
+
 
 {% block title %}Каталог{% endblock %}
 {% block content %}
-    <div class="container-fluid">
-        <div class="offer-txt justify-content-center align-self-center">
+    <div class="container">
             <div class="header">
                 <h1>Сравнение телефонов</h1>
             </div>
 
-            <div class="row">
-                <div class="col-2"> Модель </div>
-                {% for i in phones %}
-                <div class="col">
-                    {{ i.model }}
-                </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col-2"> Стоимость </div>
-                {% for i in phones %}
-                <div class="col">
-                    {{ i.price }}
-                </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col-2"> Операционная система </div>
-                {% for i in phones %}
-                <div class="col">
-                    {{ i.os }}
-                </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col-2"> Камера </div>
-                {% for i in phones %}
-                <div class="col">
-                    {{ i.cam }}
-                </div>
-                {% endfor %}
-            </div><div class="row">
-                <div class="col-2"> Цвет </div>
-                {% for i in phones %}
-                <div class="col">
-                    {{ i.color }}
-                </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col-2"> Оперативная память </div>
-                {% for i in phones %}
-                <div class="col">
-                    {{ i.ram }}
-                </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col-2"> Процессор </div>
-                {% for i in phones %}
-                <div class="col">
-                    {{ i.proc }}
-                </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col-2"> Поддержка bluetooth </div>
-                {% for i in uniq %}
-                    {% if i.bt %}
-                        <div class="col">
-                            {{ i.bt }}
-                        </div>
-                    {% else %}
-                        <div class="col">
-                             -
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col-2"> Поддержка wi-fi </div>
-                {% for i in uniq %}
-                    {% if i.wifi %}
-                        <div class="col">
-                            {{ i.wifi }}
-                        </div>
-                    {% else %}
-                        <div class="col">
-                            -
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col-2"> Поддержка SD </div>
-                {% for i in uniq %}
-                    {% if i.sd %}
-                       <div class="col">
-                            {{ i.sd }}
-                        </div>
-                    {% else %}
-                        <div class="col">
-                            -
-                        </div>
-                    {%  endif %}
-                {% endfor %}
-            </div>
-        </div>
+    {% render_table phones %}{% render_table uniq %}
     </div>
 {% endblock %}
