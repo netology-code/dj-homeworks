@@ -54,7 +54,9 @@ MIDDLEWARE = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'netology_models_list',
+        'NAME': 'net_3',
+        'USER': 'user_dj',
+        'PASSWORD': '1234',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }

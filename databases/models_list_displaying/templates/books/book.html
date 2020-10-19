@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}###{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% for bk in book %}
+            <div class="col-md-4">
+                <h2>{{ bk.name }}</h2>
+                    <p>Автор: {{ bk.author }}</p>
+                    <p>Дата публикации: {{ bk.pub_date|date:'Y-m-d' }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+        {% for i in book %}
+            {% if prev_page_url %}<a class="button button-primary" href="?page={{ prev_page_url }}">{{i.pub_date|date:'Y-m-d'}}</a>{% endif %}
+            {% if next_page_url %}<a class="button button-primary" href="?page={{ next_page_url }}">{{i.pub_date|date:'Y-m-d' }}</a>{% endif %}
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}
