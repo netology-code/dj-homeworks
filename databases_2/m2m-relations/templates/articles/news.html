@@ -14,7 +14,7 @@
         </h4>
         <p class="card-text">{{ article.text }}</p>
         {% for scope in article.name_scope.all %}
-          <span class="badge {% if scope.is_main %}badge-primary{% else %}badge-secondary{% endif %}">{{ scope.topic }}</span>
+          <span class="badge {% if scope.is_main %}badge-primary{% else %}badge-secondary{% endif %}">{{ scope.name }}</span>
         {% endfor %}
       </div>
     </div>

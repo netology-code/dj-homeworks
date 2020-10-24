@@ -8,25 +8,26 @@ from .models import Article, Scope, ArticleScope
 class RelationshipInlineFormset(BaseInlineFormSet):
     def clean(self):
         super(RelationshipInlineFormset, self).clean()
-        main_check = 0
-
+        main = []
         for form in self.forms:
-            if not form.is_valid():
-                return
-            if form.cleaned_data and form.cleaned_data.get('DELETE'):
-                if form.cleaned_data['is_main']:
-                    main_check += 1
+            if not hasattr(form, 'cleaned_data'):
+                continue
 
-        if main_check > 1:
-            raise ValidationError('Основным может быть только один раздел')
+            main.append(form.cleaned_data['is_main'])
 
-        if main_check < 1:
-            raise ValidationError('Укажите основной раздел')
+        if main.count(True) < 1:
+            raise ValidationError('<1')
+        elif main.count(True) > 1:
+            raise ValidationError('>1')
+        else:
+            return
 
 
 class RelationshipInline(admin.TabularInline):
     model = Scope
     formset = RelationshipInlineFormset
+    extra = 0
+    ordering = ("-is_main",)
 
 
 @admin.register(Article)
