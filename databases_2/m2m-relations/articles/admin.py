@@ -27,7 +27,6 @@ class RelationshipInline(admin.TabularInline):
     model = Scope
     formset = RelationshipInlineFormset
     extra = 0
-    ordering = ("-is_main",)
 
 
 @admin.register(Article)

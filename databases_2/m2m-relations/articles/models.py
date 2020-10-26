@@ -7,7 +7,7 @@ class Article(models.Model):
     published_at = models.DateTimeField(verbose_name='Дата публикации')
     image = models.ImageField(null=True, blank=True, verbose_name='Изображение')
     name_scope = models.ManyToManyField('ArticleScope', through='Scope',
-                                        verbose_name='Тематика раздела', related_name='Тематики раздела')
+                                        verbose_name='Тематика раздела', related_name='scopes')
 
     class Meta:
         verbose_name = 'Статья'
@@ -29,6 +29,9 @@ class ArticleScope(models.Model):
 
 
 class Scope(models.Model):
-    article_name = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='art_name')
+    article_name = models.ForeignKey(Article, on_delete=models.CASCADE, verbose_name='Тематика', related_name='art_name')
     scope_name = models.ForeignKey(ArticleScope, on_delete=models.CASCADE, verbose_name="Название", related_name='scp_name')
     is_main = models.BooleanField(default=False, verbose_name='Основной')
+
+    class Meta:
+        ordering = ('-is_main',)
