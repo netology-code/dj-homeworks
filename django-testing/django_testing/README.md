@@ -72,8 +72,10 @@ FAILED tests/students/test_courses_api.py::test_example - AssertionError: Just t
 
 ## Документация
 
-pytest: https://docs.pytest.org/en/stable/
-pytest-django: https://pytest-django.readthedocs.io/en/latest/
+pytest: https://docs.pytest.org/en/stable/ 
+
+pytest-django: https://pytest-django.readthedocs.io/en/latest/ 
+
 тестирование DRF: https://www.django-rest-framework.org/api-guide/testing/
 
 ## Дополнительные задания
