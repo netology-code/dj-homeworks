@@ -78,7 +78,7 @@ pytest-django: https://pytest-django.readthedocs.io/en/latest/
 
 тестирование DRF: https://www.django-rest-framework.org/api-guide/testing/
 
-## Дополнительные задания
+## Дополнительные задания (необязательные для выполнения)
 
 ### Ограничить число студентов на курсе
 
