@@ -18,7 +18,7 @@ Authorization: Token fb30cef9fe8a12659a036bfb5e94c64cee16f094
 ###
 
 # попытка поменять объявление
-PATCH 127.0.0.1:8000/api/advertisements/4/
+PATCH 127.0.0.1:8000/api/advertisements/23/
 Content-Type: application/json
 Authorization: Token fb30cef9fe8a12659a036bfb5e94c64cee16f094
 
