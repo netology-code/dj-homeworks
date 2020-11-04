@@ -1,41 +1,41 @@
 # примеры API-запросов
 
 # получение объявлений
-GET localhost:8000/api/advertisements/
+GET 127.0.0.1:8000/api/advertisements/
 Content-Type: application/json
 
 ###
 # создание объявления
-POST localhost:8000/api/advertisements/
+POST 127.0.0.1:8000/api/advertisements/
 Content-Type: application/json
-Authorization: Token 902ef055a9ac93f18327f1f9c45ab059f1a62c7d
+Authorization: Token fb30cef9fe8a12659a036bfb5e94c64cee16f094
 
 {
-  "title": "Шкаф IKEA",
-  "description": "Срочно"
+  "title": "шкаф",
+  "description": "зеро"
 }
 
 ###
 
 # попытка поменять объявление
-PATCH localhost:8000/api/advertisements/1/
+PATCH 127.0.0.1:8000/api/advertisements/4/
 Content-Type: application/json
-Authorization: Token 902ef055a9ac93f18327f1f9c45ab059f1a62c7d
+Authorization: Token fb30cef9fe8a12659a036bfb5e94c64cee16f094
 
 {
-  "status": "CLOSED"
+  "status": "DRAFT"
 }
 
 ###
 
 # фильтрация по создателю
-GET localhost:8000/api/advertisements/?creator=3
+GET 127.0.0.1:8000/api/advertisements/?status=OPEN
 Content-Type: application/json
 
 ###
 
 # фильтрация по дате
-GET localhost:8000/api/advertisements/?created_at_before=2020-10-01
+GET 127.0.0.1:8000/api/advertisements/?created_at_before=2019-10-01
 Content-Type: application/json
 
 ###
