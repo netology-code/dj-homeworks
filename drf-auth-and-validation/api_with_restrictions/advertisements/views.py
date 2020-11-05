@@ -32,6 +32,8 @@ class AdvertisementViewSet(ModelViewSet):
          #   return queryset.filter(creator_id=user.id).all()
         #elif queryset.filter(status='DRAFT'):
         #    return queryset.exclude(status="DRAFT", creator_id=user.id)
+        else:
+            return queryset
 
 
 
