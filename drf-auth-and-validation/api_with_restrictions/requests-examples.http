@@ -3,12 +3,13 @@
 # получение объявлений
 GET 127.0.0.1:8000/api/advertisements/
 Content-Type: application/json
+Authorization: Token 90c3941909c5d6cceade814470f74efbfc65d6f8
 
 ###
 # создание объявления
 POST 127.0.0.1:8000/api/advertisements/
 Content-Type: application/json
-Authorization: Token fb30cef9fe8a12659a036bfb5e94c64cee16f094
+Authorization: Token 90c3941909c5d6cceade814470f74efbfc65d6f8
 
 {
   "title": "шкаф",
@@ -18,9 +19,9 @@ Authorization: Token fb30cef9fe8a12659a036bfb5e94c64cee16f094
 ###
 
 # попытка поменять объявление
-PATCH 127.0.0.1:8000/api/advertisements/23/
+PATCH 127.0.0.1:8000/api/advertisements/25/
 Content-Type: application/json
-Authorization: Token fb30cef9fe8a12659a036bfb5e94c64cee16f094
+Authorization: Token 90c3941909c5d6cceade814470f74efbfc65d6f8
 
 {
   "status": "DRAFT"
