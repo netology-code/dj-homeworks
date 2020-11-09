@@ -70,6 +70,10 @@ FAILED tests/students/test_courses_api.py::test_example - AssertionError: Just t
 
 Этот тест можете удалить и написать в этом файле свои тесты.
 
+## Подсказки
+
+- `APIClient` в DRF является расширением Джанговского `Client`. Для того, чтобы передать GET-параметры в запросе, используйте аргумент `data`: https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.Client.get
+
 ## Документация
 
 pytest: https://docs.pytest.org/en/stable/ 
