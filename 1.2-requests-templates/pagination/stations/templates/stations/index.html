@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Title</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static "css/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "css/skeleton.css" %}">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <table class="u-full-width">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Street</th>
+                <th>District</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for station in bus_stations %}
+                <tr>
+                    <td>{{ station.Name }}</td>
+                    <td>{{ station.Street }}</td>
+                    <td>{{ station.District }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        {% if page.has_previous %}
+            <a class="button button-primary" href="?page={{ page.previous_page_number }}">⟵</a>
+        {% endif %}
+        <a class="button disabled" href="">{{ page.number }}</a>
+        {% if page.has_next %}
+            <a class="button button-primary" href="?page={{ page.next_page_number }}">⟶</a>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>
