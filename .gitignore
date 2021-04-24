@@ -1,5 +1,7 @@
-### Python ###
+# IDE specific
 .idea/
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -7,6 +9,8 @@ __pycache__/
 
 *.sqlite3
 env/
+venv/
+.venv/
 
 ### Project specific ###
 settings_local.py
