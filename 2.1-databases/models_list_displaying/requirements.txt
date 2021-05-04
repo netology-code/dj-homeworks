@@ -1,2 +1,2 @@
-Django==3.1.2
-psycopg2-binary==2.8.6
+django
+psycopg2-binary
