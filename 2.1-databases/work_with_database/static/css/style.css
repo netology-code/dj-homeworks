@@ -4,8 +4,9 @@
 }
 
 .phone {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px;
+    display: inline-block;
+    width: 250px;
 }
 
 .sort-block .sort-item {

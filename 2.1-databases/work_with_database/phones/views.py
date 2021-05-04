@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+
+def index(request):
+    return redirect('catalog')
 
 
 def show_catalog(request):
