@@ -14,7 +14,7 @@
 
 ## Блок 3. Взаимодействие с сайтом
 
-3.1. [Знакомство с API на примере Django REST framework](./drf-intro/)
+3.1. [Знакомство с API на примере Django REST framework](./3.1-drf-intro)
 
 3.2. [Django REST framework: фильтрация, валидация и аутентификация](./drf-auth-and-validation/)
 
