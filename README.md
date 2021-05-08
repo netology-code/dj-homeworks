@@ -16,9 +16,11 @@
 
 3.1. [Знакомство с API на примере Django REST framework](./3.1-drf-intro)
 
-3.2. [Django REST framework: фильтрация, валидация и аутентификация](./drf-auth-and-validation/)
+3.2. [CRUD в DRF](./3.2-crud)
 
-3.3. [Тестирование Django-приложений с использованием Pytest](./django-testing/)
+3.3. [Разделение доступа в DRF](./3.3-permissions)
+
+3.4. [Тестирование Django-приложений с использованием Pytest](./3.4-django-testing)
 
 ## Требования
 
