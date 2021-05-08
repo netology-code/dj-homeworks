@@ -1,8 +1,0 @@
-.idea/
-static/admin/
-static/ckeditor/
-
-*.pyc
-
-settings_local.py
-db.sqlite3
