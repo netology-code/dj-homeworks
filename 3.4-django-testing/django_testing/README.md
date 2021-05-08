@@ -1,5 +1,4 @@
-Тестирование Django-приложения
-====
+# Тестирование Django-приложения
 
 ## Описание
 
@@ -10,6 +9,7 @@
 Вам необходимо написать тесты для текущей логики приложения.
 
 Заведите фикстуры:
+
 - для api-client'а
 - для фабрики курсов
 - для фабрики студентов
@@ -33,12 +33,12 @@
   - сначала через фабрику создаем, потом обновляем JSON-данными
 - тест успешного удаления курса
 
-
 Все тесты должны явно проверять код возврата.
 
 Не забывайте использовать декоратор `@pytest.mark.django_db`, чтобы тесты использовали базу.
 
 Запуск тестов делается через команду:
+
 ```
 $ pytest
 ```
@@ -76,9 +76,9 @@ FAILED tests/students/test_courses_api.py::test_example - AssertionError: Just t
 
 ## Документация
 
-pytest: https://docs.pytest.org/en/stable/ 
+pytest: https://docs.pytest.org/en/stable/
 
-pytest-django: https://pytest-django.readthedocs.io/en/latest/ 
+pytest-django: https://pytest-django.readthedocs.io/en/latest/
 
 тестирование DRF: https://www.django-rest-framework.org/api-guide/testing/
 
@@ -88,7 +88,7 @@ pytest-django: https://pytest-django.readthedocs.io/en/latest/
 
 Добавьте валидацию на максимальное число студентов на курсе – 20. Подумайте, как протестировать это ограничение, не создавая 20 сущностей в базе данных.
 
-__Подсказка:__ задайте максимальное число студентов в `settings.py`: `MAX_STUDENTS_PER_COURSE`. В тестах используйте `parametrize` и фикстуру `settings` (https://pytest-django.readthedocs.io/en/latest/helpers.html#settings), чтобы переопределить параметр.
+**Подсказка:** задайте максимальное число студентов в `settings.py`: `MAX_STUDENTS_PER_COURSE`. В тестах используйте `parametrize` и фикстуру `settings` (https://pytest-django.readthedocs.io/en/latest/helpers.html#settings), чтобы переопределить параметр.
 
 Протестируйте как неудачный исход, так и успешный.
 
