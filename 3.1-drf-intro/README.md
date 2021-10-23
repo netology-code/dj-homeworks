@@ -2,7 +2,7 @@
 
 Необходимо выполнить и предоставить на проверку задачу:
 
-[API CRUD для сущностей](./simple_crud)
+[Умный дом](./smart_home)
 
 Работа должна соответствовать принятому [стилю оформления кода](https://github.com/netology-code/codestyle/tree/master/python).
 
