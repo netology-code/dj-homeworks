@@ -17,7 +17,7 @@
 
 ## Реализация
 
-- используйте `DateFromToRangeFilter` для фильтрации по дате https://django-filter.readthedocs.io/en/master/ref/filters.html
+- используйте `DateFromToRangeFilter` для фильтрации по дате https://django-filter.readthedocs.io/en/stable/ref/filters.html#datefromtorangefilter
 
 Пример работы:
 ![Фильтрация по дате](./screenshots/date_filter.png)
