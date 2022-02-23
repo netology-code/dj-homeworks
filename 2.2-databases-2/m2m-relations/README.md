@@ -109,30 +109,6 @@ class Article(models.Model):
 pip install -r requirements.txt
 ```
 
-Создать файл с локальными настройками `app/settings_local.py`
-и задать туда обязательные параметры:
-
--   SECRET_KEY - секретная строка
--   DATABASES - подключение к базе данных (`'default'`)
-
-Например:
-
-```python
-import os
-from .settings import BASE_DIR
-
-SECRET_KEY = 'd+mw&mscg5i&tx+#@bf+6m%e+d5z!u#!n%z-^o9u7y1felv2o&'
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'netology_homework_db',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
-}
-```
-
 Провести миграцию:
 
 ```bash
