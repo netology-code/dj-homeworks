@@ -13,4 +13,11 @@ class ProductViewSet(ModelViewSet):
 class StockViewSet(ModelViewSet):
     queryset = Stock.objects.all()
     serializer_class = StockSerializer
-    # при необходимости добавьте параметры фильтрации
+
+    def get_queryset(self):
+        queryset = Stock.objects.all()
+        products = self.request.query_params.get('products')
+        if products is not None:
+            queryset = queryset.filter(products__title__icontains=products)
+        return queryset
+
