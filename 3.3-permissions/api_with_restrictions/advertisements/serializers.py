@@ -44,7 +44,7 @@ class AdvertisementSerializer(serializers.ModelSerializer):
         advertisement_qnt = Advertisement.objects.filter(creator=user, status=AdvertisementStatusChoices.OPEN).count()
         if self.instance is not None:
             if self.instance.creator != user:
-                raise serializers.ValidationError("Нет доступа!")
+                raise serializers.ValidationError("You do not have permission to perform this action.")
             advertisement_status = data.get("status")
             if advertisement_status is not None:
                 if advertisement_status == AdvertisementStatusChoices.OPEN and advertisement_qnt >= 10:
