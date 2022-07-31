@@ -20,9 +20,9 @@ DATA = {
 }
 
 
-def recipe(request, dish, servings):
-    context = {'recipe': DATA[dish],
-               'servings': servings}
+def recipes(request, dish):
+    servings = int(request.GET.get('servings', 1))
+    context = {'recipe': {key: value * servings for key, value in DATA[dish].items()}}
     return render(request, 'calculator/index.html', context)
 
 
