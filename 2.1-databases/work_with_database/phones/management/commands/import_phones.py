@@ -19,4 +19,5 @@ class Command(BaseCommand):
                                  image=phone['image'],
                                  release_date=phone['release_date'],
                                  lte_exists=phone['lte_exists'],
-                                 slug=phone['name'])
+                                 slug='-'.join(phone['name'].split())
+                                 )
