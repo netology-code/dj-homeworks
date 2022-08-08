@@ -8,7 +8,7 @@
 
 ## Способ 2 (более продвинутый)
 
-- Клонируйте репозиторий с домашними заданиями git clone https://github.com/netology-code/dj-homeworks.git.
+- Клонируйте репозиторий с домашними заданиями `git clone https://github.com/netology-code/dj-homeworks.git`.
 - Перейдите в папку `cd dj-homeworks`.
 - Смените ветку на актуальную `git checkout video`.
 - Создайте репозиторий на GitHub (репозиторий должен быть открытый).
