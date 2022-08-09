@@ -14,7 +14,6 @@ def books_paginator(request, pub_date):
     books_object = Book.objects.all().order_by('pub_date')
     dates = [str(book_date) for book_dates in books_object.values('pub_date') for book_date in book_dates.values()]
     pub_date_index = dates.index(pub_date)
-    print(dates[pub_date_index])
     paginator = Paginator(dates, 1)
     page = paginator.get_page(dates.index(pub_date) + 1)
     if pub_date_index < len(dates) - 1:
