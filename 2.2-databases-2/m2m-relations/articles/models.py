@@ -19,6 +19,7 @@ class Article(models.Model):
 
 class Teg(models.Model):
     name = models.CharField(max_length=30)
+    articles = models.ManyToManyField(Article, related_name='articles', through='ArticleTeg')
 
     class Meta:
         verbose_name = 'Раздел'
