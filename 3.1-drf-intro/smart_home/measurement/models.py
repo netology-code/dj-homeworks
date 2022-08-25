@@ -5,7 +5,6 @@ from django.db import models
 
 class Sensor(models.Model):
     title = models.CharField(max_length=50, verbose_name='Название датчика')
-    image = models.ImageField(upload_to='sensor_images/%Y%m%d/', null=True, verbose_name='Внешний вид')
     description = models.CharField(max_length=200, verbose_name='Описание датчика')
 
     class Meta:
@@ -20,6 +19,7 @@ class Sensor(models.Model):
 class Measurement(models.Model):
     sensor_id = models.ForeignKey(Sensor, on_delete=models.CASCADE, related_name='measurements')
     temperature = models.FloatField(verbose_name='Температура при измерении')
+    image = models.ImageField(upload_to='sensor_images/%Y%m%d/', null=True, verbose_name='Фото с датчика')
     measurement_date = models.DateTimeField(auto_now=True, verbose_name='Дата измерения')
 
     class Meta:

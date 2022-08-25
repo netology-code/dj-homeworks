@@ -14,8 +14,7 @@ class SensorsView(ListAPIView):
     def post(self, request):
         title = request.data['name']
         description = request.data['description']
-        image = request.data.get('image')
-        sensor = Sensor.objects.create(title=title, image=image, description=description)
+        sensor = Sensor.objects.create(title=title, description=description)
         return Response(f'Датчик {sensor} добавлен')
 
 
@@ -29,8 +28,6 @@ class SensorView(RetrieveAPIView):
             sensor.description = request.data['description']
         if request.data.get('title'):
             sensor.title = request.data['title']
-        if request.data.get('image'):
-            sensor.image = request.data['image']
         sensor.save()
         return Response(f'Датчик {sensor} изменён')
 
@@ -42,5 +39,6 @@ class MeasurementsView(ListAPIView):
     def post(self, request):
         sensor = Sensor.objects.get(pk=request.data['sensor'])
         temperature = request.data['temperature']
-        mes = Measurement.objects.create(sensor_id=sensor, temperature=temperature)
+        image = request.data.get('image')
+        mes = Measurement.objects.create(sensor_id=sensor, image=image, temperature=temperature)
         return Response(f'{mes}. Измерение для датчика {sensor} добавлено')
