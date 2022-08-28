@@ -45,6 +45,9 @@ Content-Type: application/json
 POST {{baseUrl}}/stocks/
 Content-Type: application/json
 
+
+
+###
 {
   "address": "мой адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
   "positions": [
@@ -60,9 +63,6 @@ Content-Type: application/json
     }
   ]
 }
-
-###
-
 # обновляем записи на складе
 PATCH {{baseUrl}}/stocks/4/
 Content-Type: application/json
