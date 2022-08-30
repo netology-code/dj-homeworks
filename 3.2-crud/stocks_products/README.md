@@ -28,7 +28,7 @@
    После того как вы добавите код, комментарии можно удалить.
 
 2. Для обновления объектов удобно использовать метод `update_or_create`: 
-   https://docs.djangoproject.com/en/3.2/ref/models/querysets/#update-or-create
+   
 
 ## Дополнительное задание
 
