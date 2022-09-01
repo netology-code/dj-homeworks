@@ -18,4 +18,3 @@ class StockViewSet(ModelViewSet):
     filter_backends = (DjangoFilterBackend, )
     filterset_fields = ['products']
     search_fields = ['products__title', 'products__description']
-    pagination_class = LimitOffsetPagination
