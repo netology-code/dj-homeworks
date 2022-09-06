@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django.forms import BaseInlineFormSet
 
 
 class AdvertisementStatusChoices(models.TextChoices):
@@ -28,3 +29,10 @@ class Advertisement(models.Model):
     updated_at = models.DateTimeField(
         auto_now=True
     )
+    draft = models.BooleanField(default=False)
+
+
+class Favorite(models.Model):
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='favorites')
+    ad = models.ForeignKey(Advertisement, on_delete=models.CASCADE, related_name='favorites')
+

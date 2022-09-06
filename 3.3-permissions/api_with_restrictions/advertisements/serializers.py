@@ -1,7 +1,8 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
+from rest_framework.exceptions import ValidationError
 
-from advertisements.models import Advertisement
+from advertisements.models import Advertisement, Favorite
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -23,7 +24,7 @@ class AdvertisementSerializer(serializers.ModelSerializer):
     class Meta:
         model = Advertisement
         fields = ('id', 'title', 'description', 'creator',
-                  'status', 'created_at', )
+                  'status', 'created_at', 'draft')
 
     def create(self, validated_data):
         """Метод для создания"""
@@ -31,15 +32,30 @@ class AdvertisementSerializer(serializers.ModelSerializer):
         # Простановка значения поля создатель по-умолчанию.
         # Текущий пользователь является создателем объявления
         # изменить или переопределить его через API нельзя.
-        # обратите внимание на `context` – он выставляется автоматически
+        # Обратите внимание на `context` – он выставляется автоматически
         # через методы ViewSet.
-        # само поле при этом объявляется как `read_only=True`
+        # Само поле при этом объявляется как `read_only=True`
         validated_data["creator"] = self.context["request"].user
+        validated_data["favorites"] = False
         return super().create(validated_data)
 
     def validate(self, data):
         """Метод для валидации. Вызывается при создании и обновлении."""
+        request = self.context['request'].method
+        user = self.context['request'].user
 
-        # TODO: добавьте требуемую валидацию
+        if request == 'POST' and Advertisement.objects.filter(creator=user, status='OPEN').count() >= 10:
+            raise ValidationError('You cannot create more than 10 open ads')
 
         return data
+
+
+class FavoriteSerializer(serializers.ModelSerializer):
+    '''Serializer для избранного.'''
+
+    owner = UserSerializer(read_only=True, )
+    # ad = AdvertisementSerializer(read_only=True, )
+
+    class Meta:
+        model = Favorite
+        fields = ('id', 'owner', 'ad')
