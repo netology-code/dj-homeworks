@@ -33,6 +33,6 @@ class Advertisement(models.Model):
 
 
 class Favorite(models.Model):
-    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='favorites')
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     ad = models.ForeignKey(Advertisement, on_delete=models.CASCADE, related_name='favorites')
 

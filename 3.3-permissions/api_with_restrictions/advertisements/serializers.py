@@ -14,12 +14,18 @@ class UserSerializer(serializers.ModelSerializer):
                   'last_name',)
 
 
+class FavoriteSerializer(serializers.ModelSerializer):
+    '''Serializer для избранного.'''
+
+    class Meta:
+        model = Favorite
+        fields = ('id', 'owner', 'ad')
+
+
 class AdvertisementSerializer(serializers.ModelSerializer):
     """Serializer для объявления."""
 
-    creator = UserSerializer(
-        read_only=True,
-    )
+    creator = UserSerializer(read_only=True, )
 
     class Meta:
         model = Advertisement
@@ -36,26 +42,22 @@ class AdvertisementSerializer(serializers.ModelSerializer):
         # через методы ViewSet.
         # Само поле при этом объявляется как `read_only=True`
         validated_data["creator"] = self.context["request"].user
-        validated_data["favorites"] = False
         return super().create(validated_data)
 
     def validate(self, data):
         """Метод для валидации. Вызывается при создании и обновлении."""
         request = self.context['request'].method
         user = self.context['request'].user
+        # favorite = self.initial_data.get('favorites', False)
 
         if request == 'POST' and Advertisement.objects.filter(creator=user, status='OPEN').count() >= 10:
             raise ValidationError('You cannot create more than 10 open ads')
 
+        # if favorite:
+        #     if user == self.instance.creator:
+        #         raise ValidationError('You cannot add your listings to favorites')
+        #     data['favorites'] = [Favorite(self.context["request"].user, self.instance).save()]
+        #     # data['favorites__ad'] = self.instance.pk
+        #     k = 1
+
         return data
-
-
-class FavoriteSerializer(serializers.ModelSerializer):
-    '''Serializer для избранного.'''
-
-    owner = UserSerializer(read_only=True, )
-    # ad = AdvertisementSerializer(read_only=True, )
-
-    class Meta:
-        model = Favorite
-        fields = ('id', 'owner', 'ad')
