@@ -9,7 +9,7 @@ from rest_framework.viewsets import ModelViewSet
 from advertisements.filters import AdvertisementFilter
 from advertisements.models import Advertisement, Favorite
 from advertisements.permissions import IsOwner, IsOwnerDraft
-from advertisements.serializers import AdvertisementSerializer, FavoriteSerializer
+from advertisements.serializers import AdvertisementSerializer
 
 
 class AdvertisementViewSet(ModelViewSet):

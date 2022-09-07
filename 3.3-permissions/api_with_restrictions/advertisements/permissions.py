@@ -12,6 +12,3 @@ class IsOwnerDraft(BasePermission):
         if request.method in [permissions.SAFE_METHODS, 'POST'] and not obj.draft:
             return True
         return obj.draft and obj.creator == request.user
-        # if obj.draft:
-        #     return request.user == obj.creator
-        # return True
