@@ -44,4 +44,8 @@ class AdvertisementSerializer(serializers.ModelSerializer):
         if request == 'POST' and Advertisement.objects.filter(creator=user, status='OPEN').count() >= 10:
             raise ValidationError('You cannot create more than 10 open ads')
 
+        if request in ('PATCH', 'PUT') and data.get('status') == 'OPEN' \
+                and Advertisement.objects.filter(creator=user, status='OPEN').count() >= 10:
+            raise ValidationError('You cannot create more than 10 open ads')
+
         return data

@@ -9,6 +9,6 @@ class IsOwner(BasePermission):
 
 class IsOwnerDraft(BasePermission):
     def has_object_permission(self, request, view, obj):
-        if request.method in [permissions.SAFE_METHODS, 'POST'] and not obj.draft:
+        if request.method in [*permissions.SAFE_METHODS, 'POST'] and not obj.draft:
             return True
         return obj.draft and obj.creator == request.user
