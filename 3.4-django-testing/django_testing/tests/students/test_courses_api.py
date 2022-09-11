@@ -113,9 +113,8 @@ def test_create_course(client, students_factory, students_count, expected_status
 @pytest.mark.django_db
 def test_update_course(client, students_factory, courses_factory, students_count, expected_status):
     course = courses_factory(_quantity=1)
-    if students_count > 0:
-        students = students_factory(_quantity=students_count)
-        students_id = [student.id for student in students]
+    students = students_factory(_quantity=students_count)
+    students_id = [student.id for student in students]
 
     response = client.patch(f'/api/v1/courses/{course[0].id}/', data={'students': students_id})
 
