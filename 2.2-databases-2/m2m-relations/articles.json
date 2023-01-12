@@ -28,5 +28,47 @@
       "published_at": "2018-07-30T20:08:20Z",
       "image": "th_1521804489_cfyJCMV.jpg"
     }
+  },
+  {
+    "model": "articles.teg",
+    "pk": 1,
+    "fields": {
+      "name": "Культура"
+    }
+  },
+  {
+    "model": "articles.teg",
+    "pk": 2,
+    "fields": {
+      "name": "Город"
+    }
+  },
+  {
+    "model": "articles.teg",
+    "pk": 3,
+    "fields": {
+      "name": "Здоровье"
+    }
+  },
+  {
+    "model": "articles.teg",
+    "pk": 4,
+    "fields": {
+      "name": "Наука"
+    }
+  },
+  {
+    "model": "articles.teg",
+    "pk": 5,
+    "fields": {
+      "name": "Космос"
+    }
+  },
+  {
+    "model": "articles.teg",
+    "pk": 6,
+    "fields": {
+      "name": "Международные отношения"
+    }
   }
 ]

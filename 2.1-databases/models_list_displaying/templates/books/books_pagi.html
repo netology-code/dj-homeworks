@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div class="container">
+        <div class="header">
+            <h1>Книги выпущенные {{ pub_date }}</h1>
+        </div>
+        <div class="row">
+        <table class="books">
+            <tbody>
+            {% for book in books %}
+            <div class="book">
+                <h2>{{ book.name }}</h2>
+                <p>Автор: {{ book.author }}</p>
+                <p>Дата публикации: {{ book.pub_date }}</p>
+            </div>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        {% if page.has_previous %}
+            <a class="button button-primary" href="/books/{{ previous_page }}">< {{ previous_page }}</a>
+        {% endif %}
+
+        {% if page.has_next %}
+            <a class="button button-primary" href="/books/{{ next_page }}">{{ next_page }} ></a>
+        {% endif %}
+    </div>
+    </div>
