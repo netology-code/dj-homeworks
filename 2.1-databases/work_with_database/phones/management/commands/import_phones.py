@@ -14,4 +14,13 @@ class Command(BaseCommand):
 
         for phone in phones:
             # TODO: Добавьте сохранение модели
-            pass
+            new_phone = Phone(
+                name = phone["name"],
+                price = phone["price"],
+                image = phone["image"],
+                image_url = phone["image"],
+                release_date = phone['release_date'],
+                lte_exist = phone['lte_exists'],
+                slug = phone['name'].replace(" ", "")
+            )
+            new_phone.save()
