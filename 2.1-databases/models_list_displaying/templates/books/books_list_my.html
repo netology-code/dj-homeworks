@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Каталог моих книг{% endblock %}
+{% block content %}
+    <div class="container">
+        <!--<div class="header">
+            <h1><a href="/books">Каталог</a></h1>
+        </div>-->
+        {% for book in page %} <!--books-->
+            <h2>{{ book.name }}</h2>
+            <h3>{{ book.author }}</h3>
+            <h3>{{ book.pub_date }}</h3>
+            <p>--------------------------</p>
+        {% endfor %}
+
+        {% if page.has_previous %}
+            <a href="?page={{ page.previous_page_number }}">{{ back_button_title }}</a>
+        {% endif %}
+
+        {% if page.has_next %}
+            <a href="?page={{ page.next_page_number }}">{{ forward_button_title }}</a>
+        {% endif %}
+        <p>Предыдущая дата публикации {{ public_date_prev }}</p>
+        <p>Следующая дата публикации {{ public_date_next }}</p>
+        {% if public_date_prev_str %}
+            <p>
+                <a href="http://127.0.0.1:8000/books/{{ public_date_prev_str }}">Предыдущая дата публикации {{ public_date_prev_str }}</a>
+            </p>
+        {% endif %}
+
+        {% if public_date_next_str %}
+            <p>
+                <a href="http://127.0.0.1:8000/books/{{ public_date_next_str }}">Следующая дата публикации {{ public_date_next_str }}</a>
+            </p>
+        {% endif %}
+    </div>
+{% endblock %}
