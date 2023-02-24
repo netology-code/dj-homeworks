@@ -2,7 +2,7 @@
 
 Необходимо выполнить и предоставить на проверку задачу:
 
-[Тестирование Django-приложения с использованием Pytest](./django_testing)
+[Тестирование Django-приложения с использованием Pytest](./django_testing).
 
 Работа должна соответствовать принятому [стилю оформления кода](https://github.com/netology-code/codestyle/tree/master/python).
 
