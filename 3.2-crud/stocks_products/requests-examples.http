@@ -8,7 +8,7 @@ Content-Type: application/json
 
 {
   "title": "Помидор",
-  "description": "Лучшие помидоры на рынке"
+  "description": "Республика Адыгея"
 }
 
 ###
@@ -24,13 +24,13 @@ PATCH {{baseUrl}}/products/1/
 Content-Type: application/json
 
 {
-  "description": "Самые сочные и ароматные помидорки"
+  "description": "Самые сочные и ароматные помидорки из Волгограда"
 }
 
 ###
 
 # удаление продукта
-DELETE {{baseUrl}}/products/1/
+DELETE {{baseUrl}}/products/4/
 Content-Type: application/json
 
 ###
@@ -41,12 +41,18 @@ Content-Type: application/json
 
 ###
 
+# поиск продуктов по id
+GET {{baseUrl}}/products/?id=2
+Content-Type: application/json
+
+###
+
 # создание склада
 POST {{baseUrl}}/stocks/
 Content-Type: application/json
 
 {
-  "address": "мой адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
+  "address": "На Стасова 180/1",
   "positions": [
     {
       "product": 2,
@@ -71,13 +77,13 @@ Content-Type: application/json
   "positions": [
     {
       "product": 2,
-      "quantity": 100,
-      "price": 130.80
+      "quantity": 1999,
+      "price": 1999.99
     },
     {
       "product": 3,
-      "quantity": 243,
-      "price": 145
+      "quantity": 2999,
+      "price": 1999
     }
   ]
 }
@@ -85,5 +91,11 @@ Content-Type: application/json
 ###
 
 # поиск складов, где есть определенный продукт
-GET {{baseUrl}}/stocks/?products=2
+GET {{baseUrl}}/stocks/?products=5
+Content-Type: application/json
+
+###
+
+# получение складов
+GET {{baseUrl}}/stocks/
 Content-Type: application/json
