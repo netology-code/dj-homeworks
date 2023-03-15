@@ -9,6 +9,9 @@ class Student(models.Model):
         null=True,
     )
 
+    def __str__(self):
+        return self.name
+
 
 class Course(models.Model):
 
@@ -18,3 +21,6 @@ class Course(models.Model):
         Student,
         blank=True,
     )
+
+    def __str__(self):
+        return self.name
