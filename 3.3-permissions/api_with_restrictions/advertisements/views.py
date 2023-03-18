@@ -15,11 +15,9 @@ class AdvertisementViewSet(ModelViewSet):
     queryset = Advertisement.objects.all()
     serializer_class = AdvertisementSerializer
     filter_backends = [DjangoFilterBackend, OrderingFilter]
-    filterset_fields = ['id', 'updated_at', 'status', 'created_at', 'creator']
     ordering_fields = ['updated_at']
 
     filterset_class = AdvertisementFilter
-    permission_classes = [IsAuthenticated, IsOwner]
     
     # TODO: настройте ViewSet, укажите атрибуты для кверисета,
     #   сериализаторов и фильтров

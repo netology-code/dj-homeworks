@@ -14,16 +14,16 @@ Content-Type: application/json
 Authorization: Token af002e05fa755512648bf8fb72bcb4547ae47211
 
 {
-  "title": "Вешалка IKEA",
-  "description": "Не дорого!"
+  "title": "iWhatch",
+  "description": "В исправном состоянии"
 }
 
 ###
 
 # попытка поменять объявление
-PATCH {{baseUrl}}/advertisements/1/
+PATCH {{baseUrl}}/advertisements/2/
 Content-Type: application/json
-Authorization: Token 2d8bae9bb48877555e5550f1de298e4c6329c2b9
+Authorization: Token af002e05fa755512648bf8fb72bcb4547ae47211
 
 {
   "status": "CLOSED"

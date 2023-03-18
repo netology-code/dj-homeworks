@@ -16,6 +16,9 @@ class UserSerializer(serializers.ModelSerializer):
 class AdvertisementSerializer(serializers.ModelSerializer):
     """Serializer для объявления."""
 
+    #open_advertisement = Advertisement.objects.filter(creator=adv_creator) & Advertisement.objects.filter(status=AdvertisementStatusChoices.OPEN)
+    #Advertisement.objects.filter(creator=..., status=...)
+
     creator = UserSerializer(
         read_only=True,
     )
@@ -40,11 +43,19 @@ class AdvertisementSerializer(serializers.ModelSerializer):
     def validate(self, data):
         """Метод для валидации. Вызывается при создании и обновлении."""
         adv_creator = self.context["request"].user
-        limit_advertisement_count = 10
+        request_method = self.context["request"].method
+        limit_advertisement_count = 1
+
         # TODO: добавьте требуемую валидацию
-        open_advertisement = Advertisement.objects.filter(creator=adv_creator) & Advertisement.objects.filter(status=AdvertisementStatusChoices.OPEN)
+        open_advertisement = Advertisement.objects.filter(creator=adv_creator, status=AdvertisementStatusChoices.OPEN)
         advertisement_count = open_advertisement.count()
-        if advertisement_count > (limit_advertisement_count - 1):
-            raise serializers.ValidationError("У Вас-{} уже {} активных объявлений, достигнут лимит. Объявление не добавлено".format(adv_creator, advertisement_count))
-    
-        return data
+        if advertisement_count < limit_advertisement_count:
+            return data
+        
+        if advertisement_count >= limit_advertisement_count:
+            if request_method == "PATCH":
+                if data['status'] == AdvertisementStatusChoices.CLOSED:
+                    return data
+
+        raise serializers.ValidationError("У Вас-{} уже {} активных объявлений, достигнут лимит. Объявление не добавлено".format(adv_creator, advertisement_count))
+     
