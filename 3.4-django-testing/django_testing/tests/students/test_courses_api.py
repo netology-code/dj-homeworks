@@ -30,7 +30,8 @@ def test_get_single_course(client, courses_factory):
     courses = courses_factory(_quantity=quantity)
 
     #Act
-    response = client.get('/api/v1/courses/')
+    url = f'/api/v1/courses/'
+    response = client.get(url, data={'id': courses[0].id})
 
     #Assert
     assert response.status_code == 200
@@ -90,10 +91,11 @@ def test_filter_id_courses(client, courses_factory):
     courses = courses_factory(_quantity=quantity)
 
     for course in courses:
-        url = '/api/v1/courses/?id=' + str(course.id)
+        url = '/api/v1/courses/'
+
         #Act
-        response = client.get(url)
-    
+        response = client.get(url, {'id': course.id})
+
         #Assert
         assert response.status_code == 200
         data = response.json()
@@ -105,10 +107,11 @@ def test_filter_name_courses(client, courses_factory):
     quantity = 10
     courses = courses_factory(_quantity=quantity)
 
+    url = '/api/v1/courses/'
+
     for course in courses:
-        url = '/api/v1/courses/?name=' + course.name
         #Act
-        response = client.get(url)
+        response = client.get(url, {'name': course.name})
     
         #Assert
         assert response.status_code == 200
@@ -122,8 +125,8 @@ def test_update_course(client, courses_factory):
     courses = courses_factory(_quantity=quantity)
 
     for course in courses:
-       #Act
-        url = '/api/v1/courses/' + str(course.id) + '/'
+        #Act
+        url = f'/api/v1/courses/{course.id}/'
         response = client.patch(url, data={'name': 'C++'})
     
         #Assert
@@ -138,8 +141,8 @@ def test_delete_courses(client, courses_factory):
     courses = courses_factory(_quantity=quantity)
 
     for course in courses:
-       #Act
-        url = '/api/v1/courses/' + str(course.id) + '/'
+        #Act
+        url = f'/api/v1/courses/{course.id}/'
         response = client.delete(url)
     
         #Assert
