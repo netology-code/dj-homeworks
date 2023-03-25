@@ -44,7 +44,7 @@ class AdvertisementSerializer(serializers.ModelSerializer):
         """Метод для валидации. Вызывается при создании и обновлении."""
         adv_creator = self.context["request"].user
         request_method = self.context["request"].method
-        limit_advertisement_count = 1
+        limit_advertisement_count = 10
 
         # TODO: добавьте требуемую валидацию
         open_advertisement = Advertisement.objects.filter(creator=adv_creator, status=AdvertisementStatusChoices.OPEN)
@@ -59,3 +59,12 @@ class AdvertisementSerializer(serializers.ModelSerializer):
 
         raise serializers.ValidationError("У Вас-{} уже {} активных объявлений, достигнут лимит. Объявление не добавлено".format(adv_creator, advertisement_count))
      
+""" Совет Адилета Асанжоева по упрощению валидации
+def validate(self, data):
+    adv_creator = self.context["request"].user
+    request_method = self.context["request"].method
+    open_ads_count = Advertisement.objects.filter(creator=adv_creator, status=AdvertisementStatusChoices.OPEN).count()
+    if open_ads_count >= 10 and data.get('status') != 'CLOSED':
+        raise serializers.ValidationError('...')
+    return data
+"""
