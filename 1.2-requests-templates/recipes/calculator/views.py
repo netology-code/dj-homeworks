@@ -28,3 +28,21 @@ DATA = {
 #     'ингредиент2': количество2,
 #   }
 # }
+
+# def receipt(request, dish):
+#     context = {}
+#     context["recipe"] = DATA.get(dish, {})
+#     return render(request, 'calculator/index.html', context=context)
+
+def receipt(request, dish):
+    try:
+        pers = int(request.GET.get("servings", 1))
+        if pers < 1:
+            raise ValueError("Количество персон не может быть меньше одной")
+    except:
+        return render(request, 'calculator/index.html',
+                      context={"recipe": {"Error": "Количество персон не может быть меньше одной"}})
+    context = {"recipe": {}}
+    for k, v in DATA.get(dish, {}).items():
+        context["recipe"][k] = v * pers
+    return render(request, 'calculator/index.html', context=context)
