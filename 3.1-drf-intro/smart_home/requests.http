@@ -14,7 +14,7 @@ Content-Type: application/json
 
 {
   "name": "ESP32-2",
-  "description": "Датчик в коридоре"
+  "description": "Датчик в коридоре2"
 }
 
 ###

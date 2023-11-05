@@ -32,7 +32,10 @@ def test_get_single_course(client, courses_factory):
     #Act
     url = f'/api/v1/courses/'
     response = client.get(url, data={'id': courses[0].id})
-
+    """
+    от преподователя
+    в тесте test_get_single_course правильно было бы обратиться по пути /api/v1/courses/{courses[0].id}/
+    """
     #Assert
     assert response.status_code == 200
     data = response.json()
