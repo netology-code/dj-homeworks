@@ -37,7 +37,7 @@
 ```
 
 Более подробно примеры как работать с `ManyToManyField` можно посмотреть в документации Django.
-https://docs.djangoproject.com/en/dev/ref/contrib/admin/#working-with-many-to-many-models
+https://docs.djangoproject.com/en/4.2/ref/contrib/admin/#working-with-many-to-many-models
 
 ## Дополнительное задание
 
