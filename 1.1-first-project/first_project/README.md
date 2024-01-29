@@ -25,9 +25,9 @@
 
 ## Подсказки
 
-- Для получения списка файлов в рабочей директории вам поможет функция `listdir` https://docs.python.org/3.7/library/os.html#os.listdir.
+- Для получения списка файлов в рабочей директории вам поможет функция `listdir` https://docs.python.org/3.11/library/os.html#os.listdir.
 
-- Для получения текущего времени используйте модуль `datetime`: https://docs.python.org/3.7/library/datetime.html.
+- Для получения текущего времени используйте модуль `datetime`: https://docs.python.org/3.11/library/datetime.html.
 
 ## Документация по проекту
 
