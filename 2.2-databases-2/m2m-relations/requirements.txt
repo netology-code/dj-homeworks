@@ -1,3 +1,3 @@
-django
-psycopg2-binary
-pillow
+Django==3.1.2
+psycopg2-binary==2.8.6
+Pillow==8.3.2
