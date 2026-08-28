@@ -1,0 +1,5 @@
+Django==6.0.7
+djangorestframework==3.17.1
+django-filter==26.1
+psycopg[binary]==3.3.4
+
