@@ -1,0 +1,45 @@
+[
+  {
+    "model": "measurement.sensor",
+    "pk": 1,
+    "fields": {
+      "name": "ESP32",
+      "description": "Датчик в спальне"
+    }
+  },
+  {
+    "model": "measurement.sensor",
+    "pk": 2,
+    "fields": {
+      "name": "DHT22",
+      "description": "Датчик на кухне за холодильником"
+    }
+  },
+  {
+    "model": "measurement.measurement",
+    "pk": 1,
+    "fields": {
+      "sensor": 1,
+      "temperature": 22.3,
+      "created_at": "2021-10-23T16:44:51.432328Z"
+    }
+  },
+  {
+    "model": "measurement.measurement",
+    "pk": 2,
+    "fields": {
+      "sensor": 1,
+      "temperature": 22.5,
+      "created_at": "2021-10-23T16:45:51.091212Z"
+    }
+  },
+  {
+    "model": "measurement.measurement",
+    "pk": 3,
+    "fields": {
+      "sensor": 2,
+      "temperature": 21.1,
+      "created_at": "2021-10-23T17:01:00.000000Z"
+    }
+  }
+]
